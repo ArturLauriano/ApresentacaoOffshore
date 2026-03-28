@@ -262,6 +262,11 @@
       grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr);
     }
 
+    .two-col.media-heavy.tod-media {
+      grid-template-columns: minmax(0, 1.22fr) minmax(220px, 0.52fr);
+      gap: 18px;
+    }
+
     .two-col.cambio-entry {
       grid-template-columns: minmax(0, 0.62fr) minmax(0, 1.38fr);
       gap: 20px;
@@ -278,6 +283,10 @@
     .figure-card { border-radius: 24px; padding: 10px; }
     .figure-card img { width: 100%; border-radius: 16px; box-shadow: var(--shadow-soft); }
     .figure-caption { margin-top: 14px; font-size: 13px; color: var(--brand-muted); font-style: italic; }
+    .figure-card.tod-figure {
+      width: min(100%, 260px);
+      justify-self: center;
+    }
 
     .pillar {
       position: relative;
@@ -424,6 +433,7 @@
         <a href="#visao-geral">Visão geral</a>
         <a href="#navegacao">Navegação no HUB</a>
         <a href="#cliente">Cliente e conta global</a>
+        <a href="#tod">TOD no app</a>
         <a href="#cambio">Fluxo de câmbio e boleta</a>
         <a href="#produtos">Prateleira de produtos</a>
         <a href="#acompanhamento">Acompanhamento</a>
@@ -435,7 +445,7 @@
     <div class="container">
       <div class="section-number">01</div>
       <h2>Visão geral da jornada operacional</h2>
-      <p class="section-lead">Dentro do HUB Internacional, o assessor transita por quatro frentes complementares: navegação inicial, consulta do cliente, execução do câmbio e acesso à prateleira de produtos. O ganho vem de encadear essas etapas sem perder contexto da conta do cliente.</p>
+      <p class="section-lead">Dentro do HUB Internacional, o assessor transita por quatro frentes complementares: navegação inicial, consulta do cliente e alinhamento de TOD, execução do câmbio e acesso à prateleira de produtos. O ganho vem de encadear essas etapas sem perder contexto da conta do cliente.</p>
 
       <div class="callout gold"><strong>Leitura recomendada:</strong> primeiro entenda o caminho de entrada no HUB, depois valide o status da conta do cliente e só então avance para câmbio ou produtos. Essa ordem reduz retrabalho e evita travas no meio da operação.</div>
 
@@ -515,6 +525,59 @@
     </div>
   </section>
 
+  <section id="tod">
+    <div class="container">
+      <div class="section-number">04</div>
+      <h2>Cadastro de TOD pelo aplicativo</h2>
+      <p class="section-lead">Depois de validar a conta global no HUB, o Assessor pode orientar o próprio cliente no app da XP para acessar a Conta Global e preencher o cadastro de beneficiários. Esse mesmo caminho também serve para abertura da conta quando ela ainda não estiver ativa.</p>
+
+      <div class="steps-grid">
+        <article class="step-card"><div class="step-num">1</div><h4>Acessar a Conta Global</h4><p>No app da XP, o cliente entra pela área internacional ao tocar no símbolo do globo no canto superior direito.</p></article>
+        <article class="step-card"><div class="step-num">2</div><h4>Ir até sucessão</h4><p>Na página da Conta Global, basta descer até o fim para encontrar o menu de <strong>Sucessão Patrimonial</strong>.</p></article>
+        <article class="step-card"><div class="step-num">3</div><h4>Cadastrar beneficiários</h4><p>Dentro da frente de sucessão, o cliente acessa <strong>Cadastrar beneficiário</strong> e preenche o TOD.</p></article>
+        <article class="step-card"><div class="step-num">4</div><h4>Manter atualizado</h4><p>Depois do cadastro, vale revisar nomes e percentuais sempre que houver mudança patrimonial ou familiar.</p></article>
+      </div>
+
+      <div class="two-col media-heavy tod-media">
+        <div>
+          <h3 class="subsection-title">1. Entrar na Conta Global pelo app</h3>
+          <p>O cliente pode acessar a frente internacional diretamente pelo <strong>símbolo do globo no canto superior direito</strong> do app da XP. Esse é o ponto de entrada para a Conta Global dentro da jornada do aplicativo.</p>
+          <p>Se a conta ainda não estiver aberta, é por esse mesmo caminho que o cliente consegue iniciar a abertura e seguir com a ativação da Conta Global.</p>
+          <div class="callout blue"><strong>Orientação prática:</strong> peça para o cliente abrir o app, tocar no símbolo do globo e entrar na área da Conta Global. Se a conta ainda não existir, a abertura também começa por ali.</div>
+        </div>
+        <figure class="figure-card tod-figure">
+          <img src="conta internacional HUB.png" alt="App da XP com acesso à Conta Global pelo símbolo do globo">
+          <figcaption class="figure-caption">Entrada da Conta Global no app da XP pelo símbolo do globo no canto superior direito, tanto para acesso quanto para abertura da conta.</figcaption>
+        </figure>
+      </div>
+
+      <div class="two-col media-heavy tod-media">
+        <div>
+          <h3 class="subsection-title">2. Descer até Sucessão Patrimonial</h3>
+          <p>Dentro da página da Conta Global, o cliente encontra no fim da tela o menu de <strong>Sucessão Patrimonial</strong>. É esse atalho que leva para a etapa de cadastro de beneficiários.</p>
+          <p>Para o Assessor, esse passo é importante porque transforma a conversa sobre sucessão em uma orientação objetiva: abrir a Conta Global, descer até o menu de sucessão e seguir para o cadastro.</p>
+        </div>
+        <figure class="figure-card tod-figure">
+          <img src="Caminho tod.png" alt="Tela da Conta Global no app com menu de Sucessão Patrimonial">
+          <figcaption class="figure-caption">No fim da página da Conta Global, o cliente encontra o menu de Sucessão Patrimonial, ponto de acesso para iniciar o cadastro de beneficiários.</figcaption>
+        </figure>
+      </div>
+
+      <div class="two-col media-heavy tod-media">
+        <div>
+          <h3 class="subsection-title">3. Cadastrar beneficiários no TOD</h3>
+          <p>Ao tocar em <strong>Cadastrar beneficiário</strong>, o cliente entra na jornada de preenchimento do TOD. Nessa etapa, ele informa os beneficiários e organiza a distribuição que deseja deixar cadastrada na conta.</p>
+          <p>Vale orientar o cliente a concluir esse preenchimento logo depois da abertura da conta global, enquanto a jornada ainda está fresca e a conta acabou de ser ativada.</p>
+          <div class="callout gold"><strong>Por que isso importa:</strong> o TOD ajuda a deixar a sucessão operacionalmente organizada e facilita a transferência dos ativos aos beneficiários cadastrados. Por isso, faz sentido tratar esse cadastro como parte natural da ativação da Conta Global.</div>
+        </div>
+        <figure class="figure-card tod-figure">
+          <img src="Cadastrar TOD.png" alt="Tela de cadastro de beneficiário no TOD da Conta Global">
+          <figcaption class="figure-caption">Tela de cadastro de beneficiário no TOD, usada pelo cliente para concluir a frente de sucessão patrimonial da Conta Global.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
   <div class="pillar">
     <div class="mini">Pilar operacional</div>
     <h2>Câmbio como ponte entre saldo local e conta global</h2>
@@ -523,7 +586,7 @@
 
   <section id="cambio">
     <div class="container">
-      <div class="section-number">04</div>
+      <div class="section-number">05</div>
       <h2>Fluxo de câmbio dentro do HUB</h2>
       <p class="section-lead">A área de câmbio é onde o assessor transforma o saldo em reais no funding da conta internacional. O fluxo é simples, a liquidação é em D0 e exige conferência de origem dos recursos e limites antes do envio.</p>
 
@@ -602,7 +665,7 @@
 
   <section id="produtos">
     <div class="container">
-      <div class="section-number">05</div>
+      <div class="section-number">06</div>
       <h2>Prateleira de produtos</h2>
       <p class="section-lead">Com recursos já disponíveis na conta global, o HUB passa a ser o ponto de distribuição das soluções internacionais. Aqui o Assessor navega pela prateleira de produtos e seleciona a classe de ativo mais adequada para o push ao cliente.</p>
 
@@ -641,7 +704,7 @@
 
   <section id="acompanhamento">
     <div class="container">
-      <div class="section-number">06</div>
+      <div class="section-number">07</div>
       <h2>Acompanhamento de câmbio e pushs</h2>
       <p class="section-lead">Depois de executar a operação, o Assessor acompanha o andamento das solicitações na Central de Operações. Esse é o ponto de controle para saber se o câmbio avançou e se os pushs de produtos internacionais foram aceitos.</p>
 
