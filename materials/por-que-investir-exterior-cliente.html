@@ -159,6 +159,33 @@ header h1 em { font-style: italic; color: var(--av-gold-light); }
   transition: all 0.2s;
 }
 .toc-links a:hover { color: var(--av-gold); border-color: var(--av-gold); }
+.toc-download {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(196, 150, 60, 0.3);
+  background: var(--av-dark);
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  white-space: nowrap;
+  box-shadow: 0 10px 24px rgba(27, 42, 61, 0.08);
+  transition: all 0.2s;
+}
+.toc-download:hover {
+  background: var(--av-gold);
+  color: var(--av-dark);
+  border-color: var(--av-gold);
+}
+@media (max-width: 920px) {
+  .toc-inner { flex-wrap: wrap; }
+  .toc-download { width: 100%; }
+}
 .container { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
 section { padding: 72px 0; }
 section + section { border-top: 1px solid var(--av-border); }
@@ -747,6 +774,7 @@ footer {
       <a href="#acesso">Plataformas</a>
       <a href="#primeiros-passos">Primeiros Passos</a>
     </div>
+    <a class="toc-download" href="./presentations/por-que-investir-exterior-cliente-apresentacao.pptx" download>Baixar PPTX</a>
   </div>
 </nav>
 
