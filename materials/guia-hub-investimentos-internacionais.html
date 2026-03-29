@@ -1,0 +1,738 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia HUB Investimentos Internacionais</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brand-dark: #132235;
+      --brand-navy: #1c3046;
+      --brand-accent: #c4963c;
+      --brand-accent-light: #e3be74;
+      --brand-bg: #faf7f2;
+      --brand-warm: #f5ecdf;
+      --brand-text: #293949;
+      --brand-muted: #677789;
+      --brand-border: #ddd1bf;
+      --brand-blue: #2e6f9d;
+      --brand-red: #b75449;
+      --shadow-soft: 0 18px 50px rgba(19, 34, 53, 0.08);
+      --shadow-card: 0 10px 30px rgba(19, 34, 53, 0.06);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Source Sans 3", "Segoe UI", sans-serif;
+      font-size: 17px;
+      line-height: 1.72;
+      color: var(--brand-text);
+      background:
+        radial-gradient(circle at top right, rgba(196, 150, 60, 0.14), transparent 24%),
+        linear-gradient(180deg, #fcfaf6 0%, var(--brand-bg) 100%);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { display: block; max-width: 100%; }
+    p { margin-bottom: 18px; text-align: justify; }
+    ul { padding-left: 20px; }
+    li { margin-bottom: 10px; }
+    h1, h2, h3, h4 { font-family: "DM Serif Display", Georgia, serif; font-weight: 400; }
+
+    .top-bar {
+      background: var(--brand-dark);
+      color: rgba(255, 255, 255, 0.68);
+      text-align: center;
+      padding: 9px 0;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    header {
+      position: relative;
+      overflow: hidden;
+      color: #fff;
+      background:
+        radial-gradient(circle at top left, rgba(255, 255, 255, 0.34), transparent 30%),
+        linear-gradient(180deg, #96a8bb 0%, #7e92a7 14%, #5f748c 32%, #344c67 56%, #132235 100%);
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.06) 22%, rgba(19,34,53,0.02) 48%, rgba(19,34,53,0.18) 100%);
+      pointer-events: none;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--brand-accent), var(--brand-accent-light));
+    }
+
+    .header-inner, .container, .footer-inner, .toc-inner {
+      width: min(1380px, calc(100% - 36px));
+      margin: 0 auto;
+    }
+
+    .header-inner {
+      padding: 44px 0 58px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+      gap: 34px;
+      align-items: end;
+    }
+
+    .brand-logo-wrap {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 26px;
+      padding: 14px 18px;
+      border-radius: 24px;
+      background: rgba(255,255,255,0.92);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .brand-logo {
+      width: clamp(170px, 20vw, 220px);
+      height: auto;
+      display: block;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 18px;
+      padding: 7px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.16);
+      background: rgba(255,255,255,0.08);
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: rgba(255,255,255,0.78);
+    }
+
+    header h1 {
+      font-size: 58px;
+      line-height: 1.06;
+      margin-bottom: 18px;
+      max-width: 780px;
+    }
+
+    header h1 em { color: var(--brand-accent-light); font-style: italic; }
+    .header-sub { font-size: 19px; color: rgba(255,255,255,0.83); max-width: 720px; margin-bottom: 0; }
+
+    .header-panel {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 22px;
+      padding: 26px 24px;
+      backdrop-filter: blur(10px);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .header-panel h3 { font-size: 24px; margin-bottom: 12px; color: #fff; }
+    .header-panel p, .header-panel li { color: rgba(255,255,255,0.82); }
+    .header-panel ul { list-style: none; padding-left: 0; }
+    .header-panel li { padding-left: 18px; position: relative; }
+    .header-panel li::before { content: "â€¢"; position: absolute; left: 0; color: var(--brand-accent-light); }
+
+    .toc {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(250, 247, 242, 0.94);
+      border-bottom: 1px solid rgba(221, 209, 191, 0.88);
+      backdrop-filter: blur(12px);
+    }
+
+    .toc-inner {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      padding: 18px 0;
+    }
+
+    .toc-label {
+      flex-shrink: 0;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--brand-muted);
+      font-weight: 700;
+    }
+
+    .toc-links {
+      display: flex;
+      gap: 18px;
+      overflow-x: auto;
+      padding-bottom: 2px;
+    }
+
+    .toc-links a {
+      white-space: nowrap;
+      text-decoration: none;
+      color: var(--brand-text);
+      font-size: 13px;
+      font-weight: 600;
+      padding-bottom: 3px;
+      border-bottom: 2px solid transparent;
+    }
+
+    .toc-links a:hover { color: var(--brand-accent); border-color: var(--brand-accent); }
+
+    section { padding: 72px 0; }
+    section + section { border-top: 1px solid rgba(221, 209, 191, 0.72); }
+    .section-number {
+      font-size: 74px;
+      line-height: 0.92;
+      margin-bottom: -8px;
+      color: rgba(196, 150, 60, 0.18);
+    }
+
+    h2 { font-size: 38px; line-height: 1.1; color: var(--brand-dark); margin-bottom: 10px; }
+    .section-lead { max-width: 760px; color: var(--brand-muted); font-size: 19px; margin-bottom: 40px; }
+
+    .steps-grid, .cards-grid {
+      display: grid;
+      gap: 22px;
+      margin: 38px 0;
+    }
+
+    .steps-grid { grid-template-columns: repeat(4, 1fr); }
+    .cards-grid { grid-template-columns: repeat(3, 1fr); }
+
+    .step-card, .feature-card, .figure-card, .table-wrap {
+      background: rgba(255, 255, 255, 0.82);
+      border: 1px solid rgba(221, 209, 191, 0.95);
+      box-shadow: var(--shadow-card);
+    }
+
+    .step-card, .feature-card { border-radius: 18px; padding: 26px 22px; }
+
+    .step-num {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      margin-bottom: 14px;
+      background: var(--brand-dark);
+      color: #fff;
+      font-family: "DM Serif Display", Georgia, serif;
+      font-size: 18px;
+    }
+
+    .step-card h4, .feature-card h4 { font-size: 23px; color: var(--brand-dark); margin-bottom: 10px; }
+    .step-card p, .feature-card p { margin-bottom: 0; text-align: left; }
+
+    .callout {
+      padding: 24px 28px;
+      margin: 34px 0;
+      border-radius: 0 14px 14px 0;
+      box-shadow: var(--shadow-card);
+    }
+
+    .callout.gold { background: linear-gradient(135deg, #fdf6e8, #fff9f0); border-left: 5px solid var(--brand-accent); }
+    .callout.blue { background: linear-gradient(135deg, #eaf5fd, #f4f9fe); border-left: 5px solid var(--brand-blue); }
+    .callout.red { background: linear-gradient(135deg, #fdeceb, #fff5f4); border-left: 5px solid var(--brand-red); }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 24px;
+      align-items: start;
+      margin: 40px 0;
+    }
+
+    .two-col.media-heavy {
+      grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr);
+    }
+
+    .two-col.media-heavy.tod-media {
+      grid-template-columns: minmax(0, 1.22fr) minmax(220px, 0.52fr);
+      gap: 18px;
+    }
+
+    .two-col.cambio-entry {
+      grid-template-columns: minmax(0, 0.62fr) minmax(0, 1.38fr);
+      gap: 20px;
+    }
+
+    .subsection-title {
+      font-size: 29px;
+      line-height: 1.14;
+      color: var(--brand-dark);
+      margin: 10px 0 14px;
+    }
+
+    .stack { display: grid; gap: 18px; }
+    .figure-card { border-radius: 24px; padding: 10px; }
+    .figure-card img { width: 100%; border-radius: 16px; box-shadow: var(--shadow-soft); }
+    .figure-caption { margin-top: 14px; font-size: 13px; color: var(--brand-muted); font-style: italic; }
+    .figure-card.tod-figure {
+      width: min(100%, 260px);
+      justify-self: center;
+    }
+
+    .pillar {
+      position: relative;
+      padding: 50px 24px;
+      text-align: center;
+      color: #fff;
+      background: linear-gradient(180deg, #1b2d44, #132235);
+    }
+
+    .pillar::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--brand-accent), var(--brand-accent-light));
+    }
+
+    .pillar .mini {
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.66);
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .pillar p {
+      margin: 0 auto;
+      max-width: 760px;
+      color: rgba(255,255,255,0.8);
+      text-align: center;
+    }
+
+    .table-wrap { border-radius: 18px; overflow: hidden; margin: 36px 0; }
+    table { width: 100%; border-collapse: collapse; }
+    th {
+      background: var(--brand-dark);
+      color: #fff;
+      text-align: left;
+      padding: 16px 20px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      font-weight: 700;
+    }
+
+    td {
+      padding: 18px 20px;
+      border-top: 1px solid rgba(221, 209, 191, 0.9);
+      vertical-align: top;
+    }
+
+    tbody tr:nth-child(even) { background: #fcfaf6; }
+
+    .badge {
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .badge.green { background: #e8f5ee; color: #2d7a53; }
+    .badge.blue { background: #e7f1fb; color: #2b6c9c; }
+    .badge.orange { background: #fff1df; color: #bf7117; }
+
+    footer {
+      margin-top: 12px;
+      padding: 46px 0 34px;
+      color: rgba(255,255,255,0.72);
+      background: var(--brand-dark);
+    }
+
+    .footer-logo-image {
+      width: 54px;
+      height: 54px;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .footer-text { max-width: 820px; font-size: 13px; line-height: 1.8; }
+    .footer-divider { height: 1px; margin: 22px 0 16px; background: rgba(255,255,255,0.12); }
+    .footer-bottom { display: flex; justify-content: space-between; gap: 12px; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; }
+
+    @media (max-width: 980px) {
+      .header-inner, .two-col, .steps-grid, .cards-grid { grid-template-columns: 1fr; }
+      .toc-inner { flex-direction: column; align-items: flex-start; }
+      header h1 { font-size: 42px; }
+    }
+
+    @media (max-width: 640px) {
+      body { font-size: 16px; }
+      .header-inner, .container, .footer-inner, .toc-inner { width: min(1140px, calc(100% - 28px)); }
+      header h1 { font-size: 34px; }
+      h2 { font-size: 31px; }
+      .section-number { font-size: 58px; }
+      section { padding: 56px 0; }
+      .footer-bottom { flex-direction: column; }
+    }
+
+    @media print {
+      .toc { position: static; }
+      .figure-card, .step-card, .feature-card, .table-wrap { box-shadow: none; }
+      section, .figure-card, .table-wrap { page-break-inside: avoid; }
+      .pillar { page-break-before: always; }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">Material operacional interno â€¢ Alta Vista â€¢ HUB XP Internacional</div>
+
+  <header>
+    <div class="header-inner">
+      <div>
+        <div class="brand-logo-wrap">
+          <img class="brand-logo" src="../assets/logos/logo-altavista.svg" alt="Alta Vista">
+        </div>
+        <div class="eyebrow">Guia prÃ¡tico para Assessor</div>
+        <h1>Guia HUB <em>Investimentos Internacionais</em></h1>
+        <p class="header-sub">Mapa rÃ¡pido da jornada operacional do assessor para navegar pelo HUB, localizar o cliente, conferir dados da conta global, conduzir o cÃ¢mbio e acessar a prateleira de produtos internacionais.</p>
+      </div>
+      <aside class="header-panel">
+        <h3>O que este material cobre</h3>
+        <p>Este guia consolida as principais telas do fluxo internacional dentro do HUB para reduzir atrito no atendimento e acelerar a execuÃ§Ã£o.</p>
+        <ul>
+          <li>Entrada no ambiente internacional e leitura das abas de navegaÃ§Ã£o.</li>
+          <li>Consulta do cliente, status da conta, conta XP International e TOD.</li>
+          <li>Fluxo de cÃ¢mbio, da navegaÃ§Ã£o inicial atÃ© a boleta operacional.</li>
+          <li>Acesso aos produtos globais para envio de push e acompanhamento das movimentaÃ§Ãµes na Central de OperaÃ§Ãµes.</li>
+        </ul>
+      </aside>
+    </div>
+  </header>
+
+  <nav class="toc">
+    <div class="toc-inner">
+      <span class="toc-label">ConteÃºdo</span>
+      <div class="toc-links">
+        <a href="#visao-geral">VisÃ£o geral</a>
+        <a href="#navegacao">NavegaÃ§Ã£o no HUB</a>
+        <a href="#cliente">Cliente e conta global</a>
+        <a href="#tod">TOD no app</a>
+        <a href="#cambio">Fluxo de cÃ¢mbio e boleta</a>
+        <a href="#produtos">Prateleira de produtos</a>
+        <a href="#acompanhamento">Acompanhamento</a>
+      </div>
+    </div>
+  </nav>
+
+  <section id="visao-geral">
+    <div class="container">
+      <div class="section-number">01</div>
+      <h2>VisÃ£o geral da jornada operacional</h2>
+      <p class="section-lead">Dentro do HUB Internacional, o assessor transita por quatro frentes complementares: navegaÃ§Ã£o inicial, consulta do cliente e alinhamento de TOD, execuÃ§Ã£o do cÃ¢mbio e acesso Ã  prateleira de produtos. O ganho vem de encadear essas etapas sem perder contexto da conta do cliente.</p>
+
+      <div class="callout gold"><strong>Leitura recomendada:</strong> primeiro entenda o caminho de entrada no HUB, depois valide o status da conta do cliente e sÃ³ entÃ£o avance para cÃ¢mbio ou produtos. Essa ordem reduz retrabalho e evita travas no meio da operaÃ§Ã£o.</div>
+
+      <div class="steps-grid">
+        <article class="step-card"><div class="step-num">1</div><h4>Entrar no HUB</h4><p>Localize a frente internacional dentro do menu de investimentos e reconheÃ§a as abas operacionais disponÃ­veis.</p></article>
+        <article class="step-card"><div class="step-num">2</div><h4>Buscar o cliente</h4><p>Abra a tela de clientes, insira o cÃ³digo e consulte status da conta, dados cadastrais e itens regulatÃ³rios.</p></article>
+        <article class="step-card"><div class="step-num">3</div><h4>Executar o cÃ¢mbio</h4><p>Entre na Ã¡rea de cÃ¢mbio, valide a conta de origem, o valor, o spread e o total estimado a receber.</p></article>
+        <article class="step-card"><div class="step-num">4</div><h4>Navegar na prateleira de produtos</h4><p>Com recursos jÃ¡ disponÃ­veis na conta global, avance para a prateleira internacional para enviar push de funds, equities, bonds e outras estruturas.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="navegacao">
+    <div class="container">
+      <div class="section-number">02</div>
+      <h2>NavegaÃ§Ã£o no HUB Internacional</h2>
+      <p class="section-lead">A entrada no ambiente internacional combina o menu lateral do HUB com uma barra horizontal de navegaÃ§Ã£o. O assessor precisa reconhecer esses dois nÃ­veis para ir rÃ¡pido ao destino certo.</p>
+
+      <div class="two-col media-heavy">
+        <div>
+          <p>No menu lateral, o caminho operacional destacado Ã© <strong>Investimento &gt; Internacional &gt; Investimento Global</strong>. Esse Ã© o atalho de entrada para a frente em que o assessor vai trabalhar abertura, cÃ¢mbio e produtos da conta global.</p>
+          <p>Depois de entrar, a navegaÃ§Ã£o superior organiza o ambiente por tema. Ã‰ nessa rÃ©gua horizontal que o Assessor transita entre <strong>dashboard, produtos, clientes, cÃ¢mbio, portabilidade, operaÃ§Ãµes, relatÃ³rios</strong> e conteÃºdos de apoio.</p>
+          <div class="callout blue"><strong>Ponto-chave:</strong> o menu lateral serve como porta de entrada; a barra superior funciona como mapa de execuÃ§Ã£o. Entender essa lÃ³gica evita ficar voltando para a home do HUB a cada etapa.</div>
+        </div>
+        <div class="stack">
+          <figure class="figure-card">
+            <img src="../assets/hub/Hub1.png" alt="Caminho no menu lateral para Investimento Global dentro do HUB XP">
+            <figcaption class="figure-caption">Entrada pela lateral do HUB atÃ© a trilha de Investimento Global.</figcaption>
+          </figure>
+          <figure class="figure-card">
+            <img src="../assets/hub/HUB2.png" alt="Barra de navegaÃ§Ã£o superior dentro do HUB XP Internacional">
+            <figcaption class="figure-caption">RÃ©gua superior com os mÃ³dulos do ambiente internacional: clientes, cÃ¢mbio, produtos e demais Ã¡reas operacionais.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cliente">
+    <div class="container">
+      <div class="section-number">03</div>
+      <h2>Consulta do cliente e leitura da conta global</h2>
+      <p class="section-lead">A tela de cliente concentra os dados que normalmente destravam a prÃ³xima aÃ§Ã£o: status da conta XP International, envio de push, abertura de conta, dados cadastrais, W8, suitability, TOD e a visÃ£o consolidada de saldos e posiÃ§Ãµes das carteiras local e offshore.</p>
+
+      <div class="two-col media-heavy">
+        <div>
+          <h3 class="subsection-title">Caso 1: cliente ainda sem conta global</h3>
+          <p>Na aba <strong>Clientes</strong>, o Assessor consegue identificar rapidamente quando o cliente ainda <strong>nÃ£o tem a conta global aberta</strong>. Ã‰ por essa mesma frente que ele pode enviar o <strong>push de abertura de conta</strong> para que o cliente conclua o processo.</p>
+          <p>Como alternativa, o cliente tambÃ©m pode abrir diretamente pelo app da XP, acessando a Ã¡rea de <strong>Conta Global</strong>. Isso ajuda quando o Assessor prefere orientar a jornada pelo aplicativo em vez de disparar o push a partir do HUB.</p>
+          <p>A prÃ³pria tela de abertura mostra o andamento do processo, desde o envio do push atÃ© a confirmaÃ§Ã£o de dados, aceite de termos, anÃ¡lise e abertura concluÃ­da. Essa leitura Ã© Ãºtil para saber se jÃ¡ faz sentido avanÃ§ar para cÃ¢mbio ou se o cliente ainda precisa concluir a etapa de onboarding.</p>
+        </div>
+        <figure class="figure-card">
+          <img src="../assets/hub/abertura de conta.png" alt="Tela de ativaÃ§Ã£o da Conta XP International com envio de push de abertura de conta">
+          <figcaption class="figure-caption">Fluxo de abertura da Conta XP International, usado para enviar o push de abertura e acompanhar o status atÃ© a conta ficar disponÃ­vel.</figcaption>
+        </figure>
+      </div>
+
+      <div class="two-col media-heavy">
+        <div>
+          <h3 class="subsection-title">Caso 2: cliente com conta ativa</h3>
+          <p>Quando a conta global jÃ¡ estÃ¡ ativa, a mesma aba de <strong>Clientes</strong> passa a funcionar como uma visÃ£o operacional concentrada. Ali Ã© possÃ­vel confirmar se o cliente carregado estÃ¡ correto, consultar identificadores relevantes e checar informaÃ§Ãµes que impactam o atendimento.</p>
+          <p>AlÃ©m dos dados cadastrais, essa etapa tambÃ©m permite ler os <strong>saldos disponÃ­veis</strong> e a composiÃ§Ã£o das <strong>carteiras local e offshore</strong>, com posiÃ§Ãµes e alocaÃ§Ãµes jÃ¡ montadas. Essa leitura ajuda o Assessor a entender o ponto de partida do cliente antes de seguir para cÃ¢mbio ou produtos.</p>
+          <p>Ã‰ nessa etapa que tambÃ©m faz sentido revisar o <strong>TOD</strong> quando a conversa exigir alinhamento patrimonial e sucessÃ³rio.</p>
+          <div class="callout red"><strong>Antes de avanÃ§ar para cÃ¢mbio:</strong> confirme se a conta global estÃ¡ ativa, se o cliente estÃ¡ corretamente identificado e se os dados regulatÃ³rios necessÃ¡rios estÃ£o atualizados. Isso evita parar no meio da operaÃ§Ã£o.</div>
+        </div>
+        <div class="stack">
+          <figure class="figure-card">
+            <img src="../assets/hub/cliente dados.png" alt="Tela de painel do cliente com status da conta XP International e dados operacionais">
+            <figcaption class="figure-caption">Painel do cliente com status da conta internacional, conta XP International, TOD e demais dados de apoio.</figcaption>
+          </figure>
+          <figure class="figure-card">
+            <img src="../assets/hub/HUB carteira.png" alt="Tela de visÃ£o consolidada com saldos da conta investimento, conta digital e conta investimento global">
+            <figcaption class="figure-caption">VisÃ£o consolidada de saldos e posiÃ§Ãµes das carteiras local e offshore, Ãºtil para conferir recursos disponÃ­veis, alocaÃ§Ã£o atual e o tamanho da carteira global jÃ¡ investida.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tod">
+    <div class="container">
+      <div class="section-number">04</div>
+      <h2>Cadastro de TOD pelo aplicativo</h2>
+      <p class="section-lead">Depois de validar a conta global no HUB, o Assessor pode orientar o prÃ³prio cliente no app da XP para acessar a Conta Global e preencher o cadastro de beneficiÃ¡rios. Esse mesmo caminho tambÃ©m serve para abertura da conta quando ela ainda nÃ£o estiver ativa.</p>
+
+      <div class="steps-grid">
+        <article class="step-card"><div class="step-num">1</div><h4>Acessar a Conta Global</h4><p>No app da XP, o cliente entra pela Ã¡rea internacional ao tocar no sÃ­mbolo do globo no canto superior direito.</p></article>
+        <article class="step-card"><div class="step-num">2</div><h4>Ir atÃ© sucessÃ£o</h4><p>Na pÃ¡gina da Conta Global, basta descer atÃ© o fim para encontrar o menu de <strong>SucessÃ£o Patrimonial</strong>.</p></article>
+        <article class="step-card"><div class="step-num">3</div><h4>Cadastrar beneficiÃ¡rios</h4><p>Dentro da frente de sucessÃ£o, o cliente acessa <strong>Cadastrar beneficiÃ¡rio</strong> e preenche o TOD.</p></article>
+        <article class="step-card"><div class="step-num">4</div><h4>Manter atualizado</h4><p>Depois do cadastro, vale revisar nomes e percentuais sempre que houver mudanÃ§a patrimonial ou familiar.</p></article>
+      </div>
+
+      <div class="two-col media-heavy tod-media">
+        <div>
+          <h3 class="subsection-title">1. Entrar na Conta Global pelo app</h3>
+          <p>O cliente pode acessar a frente internacional diretamente pelo <strong>sÃ­mbolo do globo no canto superior direito</strong> do app da XP. Esse Ã© o ponto de entrada para a Conta Global dentro da jornada do aplicativo.</p>
+          <p>Se a conta ainda nÃ£o estiver aberta, Ã© por esse mesmo caminho que o cliente consegue iniciar a abertura e seguir com a ativaÃ§Ã£o da Conta Global.</p>
+          <div class="callout blue"><strong>OrientaÃ§Ã£o prÃ¡tica:</strong> peÃ§a para o cliente abrir o app, tocar no sÃ­mbolo do globo e entrar na Ã¡rea da Conta Global. Se a conta ainda nÃ£o existir, a abertura tambÃ©m comeÃ§a por ali.</div>
+        </div>
+        <figure class="figure-card tod-figure">
+          <img src="../assets/hub/conta internacional HUB.png" alt="App da XP com acesso Ã  Conta Global pelo sÃ­mbolo do globo">
+          <figcaption class="figure-caption">Entrada da Conta Global no app da XP pelo sÃ­mbolo do globo no canto superior direito, tanto para acesso quanto para abertura da conta.</figcaption>
+        </figure>
+      </div>
+
+      <div class="two-col media-heavy tod-media">
+        <div>
+          <h3 class="subsection-title">2. Descer atÃ© SucessÃ£o Patrimonial</h3>
+          <p>Dentro da pÃ¡gina da Conta Global, o cliente encontra no fim da tela o menu de <strong>SucessÃ£o Patrimonial</strong>. Ã‰ esse atalho que leva para a etapa de cadastro de beneficiÃ¡rios.</p>
+          <p>Para o Assessor, esse passo Ã© importante porque transforma a conversa sobre sucessÃ£o em uma orientaÃ§Ã£o objetiva: abrir a Conta Global, descer atÃ© o menu de sucessÃ£o e seguir para o cadastro.</p>
+        </div>
+        <figure class="figure-card tod-figure">
+          <img src="../assets/hub/Caminho tod.png" alt="Tela da Conta Global no app com menu de SucessÃ£o Patrimonial">
+          <figcaption class="figure-caption">No fim da pÃ¡gina da Conta Global, o cliente encontra o menu de SucessÃ£o Patrimonial, ponto de acesso para iniciar o cadastro de beneficiÃ¡rios.</figcaption>
+        </figure>
+      </div>
+
+      <div class="two-col media-heavy tod-media">
+        <div>
+          <h3 class="subsection-title">3. Cadastrar beneficiÃ¡rios no TOD</h3>
+          <p>Ao tocar em <strong>Cadastrar beneficiÃ¡rio</strong>, o cliente entra na jornada de preenchimento do TOD. Nessa etapa, ele informa os beneficiÃ¡rios e organiza a distribuiÃ§Ã£o que deseja deixar cadastrada na conta.</p>
+          <p>Vale orientar o cliente a concluir esse preenchimento logo depois da abertura da conta global, enquanto a jornada ainda estÃ¡ fresca e a conta acabou de ser ativada.</p>
+          <div class="callout gold"><strong>Por que isso importa:</strong> o TOD ajuda a deixar a sucessÃ£o operacionalmente organizada e facilita a transferÃªncia dos ativos aos beneficiÃ¡rios cadastrados. Por isso, faz sentido tratar esse cadastro como parte natural da ativaÃ§Ã£o da Conta Global.</div>
+        </div>
+        <figure class="figure-card tod-figure">
+          <img src="../assets/hub/Cadastrar TOD.png" alt="Tela de cadastro de beneficiÃ¡rio no TOD da Conta Global">
+          <figcaption class="figure-caption">Tela de cadastro de beneficiÃ¡rio no TOD, usada pelo cliente para concluir a frente de sucessÃ£o patrimonial da Conta Global.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="pillar">
+    <div class="mini">Pilar operacional</div>
+    <h2>CÃ¢mbio como ponte entre saldo local e conta global</h2>
+    <p>Depois da validaÃ§Ã£o cadastral, a jornada normalmente migra para a conversÃ£o de recursos. O HUB separa bem o caminho de acesso, a aÃ§Ã£o de iniciar o cÃ¢mbio e a boleta final de envio.</p>
+  </div>
+
+  <section id="cambio">
+    <div class="container">
+      <div class="section-number">05</div>
+      <h2>Fluxo de cÃ¢mbio dentro do HUB</h2>
+      <p class="section-lead">A Ã¡rea de cÃ¢mbio Ã© onde o assessor transforma o saldo em reais no funding da conta internacional. O fluxo Ã© simples, a liquidaÃ§Ã£o Ã© em D0 e exige conferÃªncia de origem dos recursos e limites antes do envio.</p>
+
+      <div class="steps-grid">
+        <article class="step-card"><div class="step-num">1</div><h4>Entrar em CÃ¢mbio</h4><p>Na barra superior do HUB Internacional, acesse a aba de cÃ¢mbio para abrir a frente operacional correta.</p></article>
+        <article class="step-card"><div class="step-num">2</div><h4>Ler o saldo</h4><p>Confira o saldo disponÃ­vel na conta de investimentos ou digital e o saldo jÃ¡ existente na conta global.</p></article>
+        <article class="step-card"><div class="step-num">3</div><h4>Acionar a operaÃ§Ã£o</h4><p>Na tela do cliente em cÃ¢mbio, o botÃ£o <strong>Fazer CÃ¢mbio</strong> leva o assessor para a boleta operacional.</p></article>
+        <article class="step-card"><div class="step-num">4</div><h4>Preparar o envio</h4><p>Como o cÃ¢mbio Ã© em D0, revise conta de origem, valor, spread e limite antes de confirmar a remessa para a conta investimento global.</p></article>
+      </div>
+
+      <div class="two-col cambio-entry">
+        <div>
+          <h3 class="subsection-title">Da navegaÃ§Ã£o atÃ© o botÃ£o â€œFazer CÃ¢mbioâ€</h3>
+          <p>O fluxo comeÃ§a na rÃ©gua superior do HUB Internacional. O primeiro movimento do Assessor Ã© clicar em <strong>CÃ¢mbio</strong> para entrar na frente operacional correta. Essa etapa concentra a busca do cliente e a passagem para a boleta.</p>
+          <p>Dentro dessa Ã¡rea, o prÃ³ximo passo Ã© <strong>localizar o cliente pelo cÃ³digo</strong>. Depois de abrir o cadastro correto, o HUB exibe os saldos relevantes para a operaÃ§Ã£o e habilita a continuidade do processo.</p>
+          <p>Com o cliente carregado, o Assessor deve <strong>confirmar se o cliente exibido estÃ¡ correto</strong>, <strong>verificar o saldo disponÃ­vel</strong> e entÃ£o clicar em <strong>Fazer CÃ¢mbio</strong>, que Ã© a aÃ§Ã£o que leva diretamente para a boleta de envio.</p>
+          <div class="callout blue"><strong>SequÃªncia operacional:</strong> clique em CÃ¢mbio, pesquise o cÃ³digo do cliente, confirme se o cliente estÃ¡ correto, verifique o saldo disponÃ­vel e sÃ³ entÃ£o avance para â€œFazer CÃ¢mbioâ€.</div>
+        </div>
+        <div class="stack">
+          <figure class="figure-card">
+        <img src="../assets/hub/caminho para cambio.png" alt="Tela do HUB Internacional com a aba CÃ¢mbio destacada">
+            <figcaption class="figure-caption">Entrada pela aba de CÃ¢mbio no menu superior do HUB, ponto de partida para localizar o cliente e seguir com a operaÃ§Ã£o.</figcaption>
+          </figure>
+          <figure class="figure-card">
+            <img src="../assets/hub/cambio.png" alt="Tela de cÃ¢mbio com botÃ£o Fazer CÃ¢mbio destacado">
+            <figcaption class="figure-caption">Depois de localizar o cliente e validar os saldos exibidos, o prÃ³ximo passo Ã© clicar em â€œFazer CÃ¢mbioâ€.</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="two-col media-heavy">
+        <div>
+          <h3 class="subsection-title">Leitura da boleta operacional</h3>
+          <p>Ao clicar em <strong>Fazer CÃ¢mbio</strong>, o fluxo avanÃ§a para a boleta. Ã‰ nela que o Assessor escolhe se o recurso em reais sai da <strong>Conta Investimento</strong> ou da <strong>Conta Digital</strong>, informa o valor da operaÃ§Ã£o e define o spread aplicÃ¡vel dentro da alÃ§ada disponÃ­vel.</p>
+          <p>O painel lateral da boleta consolida a conferÃªncia final da operaÃ§Ã£o: conta de origem, conta destino, cotaÃ§Ã£o do cliente, impostos, comissÃ£o estimada e <strong>total aproximado a receber</strong>. Como a liquidaÃ§Ã£o Ã© em D0, essa revisÃ£o precisa ser objetiva e segura.</p>
+          <div class="callout blue"><strong>Boa prÃ¡tica:</strong> antes de clicar em enviar, confira a conta de origem, o valor do cÃ¢mbio e o spread aplicado.</div>
+        </div>
+        <figure class="figure-card">
+        <img src="../assets/hub/boleta cambio.png" alt="Boleta de envio de cÃ¢mbio com conta origem, valor, spread e botÃ£o enviar">
+          <figcaption class="figure-caption">Boleta operacional de cÃ¢mbio com destaque para conta origem, valor em reais, spread e confirmaÃ§Ã£o do envio em D0.</figcaption>
+        </figure>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Campo</th>
+              <th>O que validar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Conta de origem</td>
+              <td>Escolher entre Conta Investimento ou Conta Digital, conforme onde o saldo em reais estÃ¡ disponÃ­vel.</td>
+            </tr>
+            <tr>
+              <td>Valor do cÃ¢mbio</td>
+              <td>Confirmar o montante em reais que serÃ¡ convertido.</td>
+            </tr>
+            <tr>
+              <td>Spread</td>
+              <td>Aplicar dentro da faixa ou alÃ§ada permitida e em linha com a proposta combinada.</td>
+            </tr>
+            <tr>
+              <td>Resumo da cotaÃ§Ã£o</td>
+              <td>Checar IOF, comissÃ£o estimada, VET e total aproximado a receber.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout gold"><strong>Leitura operacional:</strong> essa etapa Ã© a ponte entre a anÃ¡lise comercial e a execuÃ§Ã£o. O Assessor deve sair da jornada de cÃ¢mbio com clareza sobre o cliente selecionado, o saldo de origem, o valor da conversÃ£o, o spread aplicado e quanto o cliente receberÃ¡ em dÃ³lar.</div>
+    </div>
+  </section>
+
+  <section id="produtos">
+    <div class="container">
+      <div class="section-number">06</div>
+      <h2>Prateleira de produtos</h2>
+      <p class="section-lead">Com recursos jÃ¡ disponÃ­veis na conta global, o HUB passa a ser o ponto de distribuiÃ§Ã£o das soluÃ§Ãµes internacionais. Aqui o Assessor navega pela prateleira de produtos e seleciona a classe de ativo mais adequada para o push ao cliente.</p>
+
+      <div class="two-col media-heavy">
+        <div>
+          <p>Na frente de <strong>Produtos</strong>, o Assessor encontra os acessos para <strong>fundos de investimento, renda variÃ¡vel/equity, bonds, tesouro, CDs e notas estruturadas</strong>. Essa tela ajuda a transformar o dinheiro convertido em carteira efetivamente alocada.</p>
+          <p>O objetivo dessa etapa Ã© sair da conta jÃ¡ com o produto certo mapeado e com o push preparado para o cliente. Depois do envio, o monitoramento operacional segue em uma frente prÃ³pria, na Central de OperaÃ§Ãµes.</p>
+        </div>
+        <figure class="figure-card">
+          <img src="../assets/hub/produtos.png" alt="Menu de produtos globais com fundos, equity, bonds e outras classes">
+          <figcaption class="figure-caption">Prateleira internacional de produtos, com destaque para fundos e demais classes globais disponÃ­veis para push.</figcaption>
+        </figure>
+      </div>
+
+      <div class="cards-grid">
+        <article class="feature-card">
+          <span class="badge green">Funds</span>
+          <h4>Fundos globais</h4>
+          <p>Porta de entrada recorrente para diversificaÃ§Ã£o internacional assistida, com gestÃ£o profissional e composiÃ§Ã£o pronta.</p>
+        </article>
+        <article class="feature-card">
+          <span class="badge blue">Equities</span>
+          <h4>Renda variÃ¡vel</h4>
+          <p>Acesso ao mercado acionÃ¡rio internacional dentro da mesma jornada operacional, Ãºtil para alocaÃ§Ã£o temÃ¡tica, setorial ou geogrÃ¡fica.</p>
+        </article>
+        <article class="feature-card">
+          <span class="badge orange">Bonds</span>
+          <h4>Renda fixa e estruturas</h4>
+          <p>Bonds, tesouro, CDs e notas estruturadas ampliam a prateleira e ajudam a compor a carteira global com objetivos especÃ­ficos.</p>
+        </article>
+      </div>
+
+      <div class="callout gold"><strong>Fechamento da jornada:</strong> o HUB nÃ£o Ã© sÃ³ um lugar para mandar push. Ele organiza o atendimento do comeÃ§o ao fim: navegaÃ§Ã£o, ativaÃ§Ã£o, funding e distribuiÃ§Ã£o. Quanto melhor o assessor dominar essa sequÃªncia, mais fluido fica o atendimento ao cliente internacional.</div>
+    </div>
+  </section>
+
+  <section id="acompanhamento">
+    <div class="container">
+      <div class="section-number">07</div>
+      <h2>Acompanhamento de cÃ¢mbio e pushs</h2>
+      <p class="section-lead">Depois de executar a operaÃ§Ã£o, o Assessor acompanha o andamento das solicitaÃ§Ãµes na Central de OperaÃ§Ãµes. Esse Ã© o ponto de controle para saber se o cÃ¢mbio avanÃ§ou e se os pushs de produtos internacionais foram aceitos.</p>
+
+      <div class="two-col media-heavy">
+        <div>
+          <p>Na aba <strong>OperaÃ§Ãµes</strong>, a Central de OperaÃ§Ãµes organiza o monitoramento em duas frentes principais. Em <strong>DepÃ³sitos e Saques</strong>, o Assessor acompanha as movimentaÃ§Ãµes ligadas ao cÃ¢mbio. Em <strong>Ativos Internacionais</strong>, acompanha os <strong>pushs de produtos</strong> enviados ao cliente.</p>
+          <p>A tela tambÃ©m permite acompanhar o status das solicitaÃ§Ãµes ao longo da jornada, o que ajuda a identificar rapidamente se a ordem estÃ¡ em processamento, pendente de cliente ou jÃ¡ aceita.</p>
+          <div class="callout blue"><strong>Leitura prÃ¡tica:</strong> use esse mÃ³dulo para fechar o ciclo operacional. Depois de enviar cÃ¢mbio ou produto, volte aqui para acompanhar status, aceite do cliente e andamento das solicitaÃ§Ãµes.</div>
+        </div>
+        <figure class="figure-card">
+          <img src="../assets/hub/Acompanhamentos.png" alt="Central de OperaÃ§Ãµes com abas de DepÃ³sitos e Saques e Ativos Internacionais">
+          <figcaption class="figure-caption">Central de OperaÃ§Ãµes usada para acompanhar DepÃ³sitos e Saques ligados ao cÃ¢mbio e os pushs de produtos em Ativos Internacionais.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <img class="footer-logo-image" src="../assets/logos/logo.svg" alt="Alta Vista">
+      <p class="footer-text">Este material destina-se a fins educacionais e informativos. NÃ£o constitui oferta, solicitaÃ§Ã£o ou recomendaÃ§Ã£o individualizada de compra ou venda de qualquer valor mobiliÃ¡rio ou instrumento financeiro. Investimentos no exterior envolvem riscos, incluindo flutuaÃ§Ãµes cambiais, risco de mercado, risco polÃ­tico e risco regulatÃ³rio. Antes de investir, avalie seu perfil e a adequaÃ§Ã£o da estratÃ©gia ao seu patrimÃ´nio e aos seus objetivos.</p>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <span>Guia HUB Investimentos Internacionais</span>
+        <span>Alta Vista Investimentos</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+
