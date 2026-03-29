@@ -24,7 +24,7 @@ module.exports = [
       eyebrow: "Alta Vista Investimentos | Guia do Cliente",
       title: "Por que Diversificar Alem do Brasil?",
       subtitle:
-        "Uma apresentacao estruturada a partir do HTML original para explicar o custo do vies local, o papel do dolar e como o acesso internacional ficou mais simples.",
+        "Uma apresentacao estruturada para explicar o custo do vies local, o papel do dolar e como o acesso internacional ficou mais simples.",
       chips: [
         "Diversificacao real",
         "Protecao em moeda forte",
@@ -44,7 +44,7 @@ module.exports = [
         section: "Tese Central",
         title: "A discussao nao e sobre moda, e sobre fronteira de carteira",
         lead:
-          "O HTML parte de uma ideia simples: investir so no Brasil restringe oportunidades, concentra riscos e deixa a carteira dependente da mesma moeda, dos mesmos setores e do mesmo ciclo domestico.",
+          "A tese central e simples: investir so no Brasil restringe oportunidades, concentra riscos e deixa a carteira dependente da mesma moeda, dos mesmos setores e do mesmo ciclo domestico.",
         cards: [
           {
             title: "Problema do vies local",
@@ -65,7 +65,7 @@ module.exports = [
             ],
           },
           {
-            title: "Mensagem do material",
+            title: "Mensagem central",
             tone: "green",
             items: [
               "Diversificar fora deixou de ser privilegio de poucos.",
@@ -96,8 +96,34 @@ module.exports = [
         callout: {
           title: "Vies local e estrutural",
           body:
-            "O material mostra que a sensacao de diversificacao local engana. A carteira parece ampla em reais, mas continua estreita quando medida contra o mercado global.",
+            "A sensacao de diversificacao local engana. A carteira parece ampla em reais, mas continua estreita quando medida contra o mercado global.",
         },
+      },
+      {
+        type: "imageGrid",
+        section: "Mercado Global",
+        title: "As imagens reforcam o tamanho da concentracao domestica",
+        lead:
+          "Os graficos deixam claro como o Brasil representa uma parcela pequena do mercado global e como o vies local comprime o universo investivel.",
+        columns: 2,
+        images: [
+          {
+            htmlAlt: "Participacao do Brasil nos indices MSCI e no PIB do G20",
+            caption: "Participacao do Brasil nos indices MSCI e no PIB do G20.",
+          },
+          {
+            htmlAlt: "Tamanho do mercado de titulos corporativos",
+            caption: "Mercado global de titulos corporativos versus mercado brasileiro.",
+          },
+          {
+            htmlAlt: "J.P. Morgan: Local investing and global opportunities",
+            caption: "Comparacao entre vies local e oportunidades globais.",
+          },
+          {
+            htmlAlt: "Alocacao dos investidores em acoes internacionais por pais",
+            caption: "Alocacao internacional por pais evidencia o atraso relativo do investidor brasileiro.",
+          },
+        ],
       },
       {
         type: "cards",
@@ -136,11 +162,25 @@ module.exports = [
         ],
       },
       {
+        type: "imageGrid",
+        section: "Setores",
+        title: "A comparacao visual entre lideres de mercado deixa o gap mais claro",
+        lead:
+          "Quando se observa a mudanca nas maiores empresas do mundo ao longo do tempo, fica evidente como a bolsa brasileira permaneceu concentrada em setores maduros enquanto a lideranca global migrou para tecnologia e inovacao.",
+        columns: 1,
+        images: [
+          {
+            htmlAlt: "Maiores empresas: Ibovespa vs S&P 500 ao longo do tempo",
+            caption: "Maiores empresas: Ibovespa versus S&P 500 ao longo do tempo.",
+          },
+        ],
+      },
+      {
         type: "stats",
         section: "Risco Brasil",
         title: "O CDI parece estavel, mas nao elimina risco Brasil",
         lead:
-          "O HTML chama atencao para um ponto recorrente: medir tudo em reais faz o investidor subestimar o risco soberano, o impacto da moeda e a perda de poder de compra em dolar.",
+          "Medir tudo em reais faz o investidor subestimar o risco soberano, o impacto da moeda e a perda de poder de compra em dolar.",
         stats: [
           { value: "141,5", label: "CDS de 5 anos do Brasil" },
           { value: "BB / Ba1", label: "Rating soberano atual" },
@@ -160,11 +200,29 @@ module.exports = [
         },
       },
       {
+        type: "imageGrid",
+        section: "Risco Brasil",
+        title: "Os indicadores visuais ajudam a traduzir o risco soberano",
+        lead:
+          "Os comparativos de CDS e de rating mostram por que o risco Brasil nao pode ser tratado como neutro quando a carteira esta quase toda concentrada no mercado domestico.",
+        columns: 2,
+        images: [
+          {
+            htmlAlt: "CDS 5 anos por pais",
+            caption: "CDS de 5 anos por pais comparaveis.",
+          },
+          {
+            htmlAlt: "Paises com rating melhor que o Brasil",
+            caption: "Paises com rating superior ao do Brasil.",
+          },
+        ],
+      },
+      {
         type: "stats",
         section: "Retornos",
         title: "Retornos globais em perspectiva mostram o custo da concentracao",
         lead:
-          "A simulacao do material compara tres trajetorias para US$ 100 mil e evidencia como o patrimonio pode crescer em reais, mas ficar para tras frente a ativos globais mais eficientes.",
+          "A simulacao compara tres trajetorias para US$ 100 mil e evidencia como o patrimonio pode crescer em reais, mas ficar para tras frente a ativos globais mais eficientes.",
         stats: [
           { value: "US$ 281 mil", label: "CDI convertido em dolar" },
           { value: "US$ 471 mil", label: "Portfolio global 60/40" },
@@ -179,15 +237,33 @@ module.exports = [
         callout: {
           title: "Nao basta ganhar em reais",
           body:
-            "O ponto do HTML e mostrar que patrimonio mais rico em reais ainda pode estar relativamente mais pobre quando comparado a alternativas internacionais mais eficientes.",
+            "Patrimonio mais rico em reais ainda pode estar relativamente mais pobre quando comparado a alternativas internacionais mais eficientes.",
         },
+      },
+      {
+        type: "imageGrid",
+        section: "Retornos",
+        title: "Os graficos de retorno deixam a diferenca de acumulacao mais tangivel",
+        lead:
+          "As imagens comparativas ajudam a enxergar o que acontece quando a mesma base de capital segue trajetorias diferentes em dolar ao longo do tempo.",
+        columns: 2,
+        images: [
+          {
+            htmlAlt: "Comparacao de retornos: CDI vs 60/40 vs S&P 500",
+            caption: "Comparacao de retornos entre CDI, portfolio 60/40 e S&P 500.",
+          },
+          {
+            htmlAlt: "Evolucao nominal de US$ 100k em 20 anos",
+            caption: "Evolucao nominal de US$ 100 mil ao longo de 20 anos.",
+          },
+        ],
       },
       {
         type: "cards",
         section: "Protecao",
         title: "Risco-retorno e dolar cumprem papeis complementares",
         lead:
-          "O material combina duas mensagens: ativos brasileiros dolarizados tiveram uma relacao risco-retorno inferior, e uma parcela conservadora em dolar historicamente protegeu a carteira nos piores momentos locais.",
+          "Dois pontos se reforcam: ativos brasileiros dolarizados tiveram uma relacao risco-retorno inferior, e uma parcela conservadora em dolar historicamente protegeu a carteira nos piores momentos locais.",
         cards: [
           {
             title: "Ineficiencia dos ativos brasileiros",
@@ -219,11 +295,29 @@ module.exports = [
         ],
       },
       {
+        type: "imageGrid",
+        section: "Protecao",
+        title: "Risco-retorno e protecao cambial aparecem com clareza nos graficos",
+        lead:
+          "As imagens abaixo reforcam dois argumentos complementares: a baixa eficiencia dos ativos brasileiros em dolar e o papel do dolar como amortecedor em anos de maior estresse local.",
+        columns: 2,
+        images: [
+          {
+            htmlAlt: "Retorno acumulado vs volatilidade anualizada - 20 anos",
+            caption: "Retorno acumulado versus volatilidade anualizada em 20 anos.",
+          },
+          {
+            htmlAlt: "Dolar vs benchmarks Brasil - Retorno anual",
+            caption: "Dolar versus benchmarks brasileiros em retorno anual.",
+          },
+        ],
+      },
+      {
         type: "process",
         section: "Acesso",
         title: "O acesso internacional saiu do private e virou infraestrutura",
         lead:
-          "Outra tese central do HTML e que a grande mudanca nao foi filosofica; foi operacional. Abertura de conta, cambio, suporte e relatorios ficaram mais integrados ao investidor brasileiro.",
+          "A grande mudanca nao foi filosofica; foi operacional. Abertura de conta, cambio, suporte e relatorios ficaram mais integrados ao investidor brasileiro.",
         steps: [
           {
             title: "Antes",
@@ -264,7 +358,7 @@ module.exports = [
         section: "Tributacao e Sucessao",
         title: "Tributacao, sucessao e PIC ficaram mais administraveis",
         lead:
-          "O HTML nao trata o tema como um detalhe. Ele mostra que imposto, sucessao e tipo de veiculo precisam entrar cedo na conversa, mas hoje podem ser tratados com muito mais clareza do que no passado.",
+          "Imposto, sucessao e tipo de veiculo precisam entrar cedo na conversa, mas hoje podem ser tratados com muito mais clareza do que no passado.",
         cards: [
           {
             title: "Pessoa fisica",
@@ -300,7 +394,7 @@ module.exports = [
         section: "Como Comecar",
         title: "A alocacao internacional pode comecar simples e ganhar sofisticacao",
         lead:
-          "A conclusao do material e pragmatica: definir o objetivo, iniciar com uma estrutura eficiente e aumentar a complexidade apenas quando patrimonio, sucessao e governanca justificarem.",
+          "A conclusao e pragmatica: definir o objetivo, iniciar com uma estrutura eficiente e aumentar a complexidade apenas quando patrimonio, sucessao e governanca justificarem.",
         cards: [
           {
             title: "Conta internacional",
@@ -356,7 +450,7 @@ module.exports = [
       eyebrow: "Alta Vista Investimentos | Guia do Cliente",
       title: "Tributacao de Investimentos Internacionais",
       subtitle:
-        "Deck em PowerPoint estruturado a partir do HTML publicado para resumir aliquotas, risco sucessorio, TOD e quando a conversa evolui para uma PIC offshore.",
+        "Deck em PowerPoint estruturado para resumir aliquotas, risco sucessorio, TOD e quando a conversa evolui para uma PIC offshore.",
       chips: [
         "Ganho de capital",
         "Estate tax",
@@ -376,7 +470,7 @@ module.exports = [
         section: "Primeiro Dolar",
         title: "A eficiencia da carteira depende de tres decisoes antes do retorno",
         lead:
-          "O HTML insiste que a analise nao comeca no ticker. Veiculo, jurisdicao e estrutura sucessoria alteram o retorno liquido, o risco patrimonial e a complexidade para a familia.",
+          "A analise nao comeca no ticker. Veiculo, jurisdicao e estrutura sucessoria alteram o retorno liquido, o risco patrimonial e a complexidade para a familia.",
         cards: [
           {
             title: "Veiculo",
@@ -433,7 +527,7 @@ module.exports = [
         section: "Estate Tax",
         title: "Ativos de raiz americana exigem leitura sucessoria desde o inicio",
         lead:
-          "O HTML traduz o estate tax em termos praticos: o risco nao nasce da conta internacional em si, mas do tipo de ativo mantido dentro dela e do domicilio juridico desse ativo.",
+          "O estate tax em termos praticos mostra que o risco nao nasce da conta internacional em si, mas do tipo de ativo mantido dentro dela e do domicilio juridico desse ativo.",
         cards: [
           {
             title: "Regra-base",
@@ -469,7 +563,7 @@ module.exports = [
         section: "TOD",
         title: "TOD e a camada operacional minima da sucessao",
         lead:
-          "O Transfer on Death aparece no HTML como providencia basica da conta internacional: simples, barata e imediata, mas insuficiente se a carteira continuar carregando ativos de raiz americana acima do limite relevante.",
+          "O Transfer on Death funciona como providencia basica da conta internacional: simples, barata e imediata, mas insuficiente se a carteira continuar carregando ativos de raiz americana acima do limite relevante.",
         cards: [
           {
             title: "O que resolve",
@@ -505,7 +599,7 @@ module.exports = [
         section: "PIC Offshore",
         title: "A PIC entra quando a conversa deixa de ser apenas de produto",
         lead:
-          "A apresentacao derivada do HTML preserva a mesma mensagem: a PIC nao e a resposta padrao; ela aparece quando patrimonio, necessidade de governanca e sucessao mais sofisticada justificam a camada societaria adicional.",
+          "A PIC nao e a resposta padrao; ela aparece quando patrimonio, necessidade de governanca e sucessao mais sofisticada justificam a camada societaria adicional.",
         steps: [
           {
             title: "Quando entra",
@@ -546,7 +640,7 @@ module.exports = [
         section: "Resumo",
         title: "A recomendacao e escalar complexidade so quando houver motivo patrimonial",
         lead:
-          "O fechamento do HTML consolida uma logica simples: comecar por instrumentos eficientes, preencher TOD, mapear a raiz americana e so depois discutir estruturas mais pesadas, se o patrimonio realmente pedir.",
+          "A logica final e simples: comecar por instrumentos eficientes, preencher TOD, mapear a raiz americana e so depois discutir estruturas mais pesadas, se o patrimonio realmente pedir.",
         cards: [
           {
             title: "Carteira simples",
@@ -599,7 +693,7 @@ module.exports = [
       eyebrow: "Alta Vista Investimentos | Guia Pratico para Assessor",
       title: "Guia HUB Investimentos Internacionais",
       subtitle:
-        "Apresentacao em PowerPoint baseada no HTML operacional para transformar a navegacao do HUB, o fluxo de cambio e o uso da conta global em um roteiro visual e editavel.",
+        "Apresentacao em PowerPoint para transformar a navegacao do HUB, o fluxo de cambio e o uso da conta global em um roteiro visual e editavel.",
       chips: [
         "Navegacao do HUB",
         "Cambio D0",
@@ -619,7 +713,7 @@ module.exports = [
         section: "Jornada",
         title: "A operacao no HUB funciona melhor quando o assessor pensa em quatro frentes conectadas",
         lead:
-          "O material operacional organiza a jornada internacional do assessor como um fluxo continuo: entrar no ambiente certo, ler a situacao do cliente, transformar saldo local em funding internacional e acompanhar a alocacao ate a conclusao.",
+          "A jornada internacional do assessor pode ser organizada como um fluxo continuo: entrar no ambiente certo, ler a situacao do cliente, transformar saldo local em funding internacional e acompanhar a alocacao ate a conclusao.",
         steps: [
           {
             title: "Entrada no ambiente",
@@ -660,7 +754,7 @@ module.exports = [
         section: "Navegacao",
         title: "Navegacao no HUB: reconhecer os dois niveis economiza tempo",
         lead:
-          "O HTML deixa claro que a orientacao inicial do assessor depende de duas leituras simultaneas: o caminho lateral para entrar no modulo correto e a regua superior para mudar de assunto sem perder o cliente de vista.",
+          "A orientacao inicial do assessor depende de duas leituras simultaneas: o caminho lateral para entrar no modulo correto e a regua superior para mudar de assunto sem perder o cliente de vista.",
         cards: [
           {
             title: "Menu lateral",
@@ -697,7 +791,7 @@ module.exports = [
         section: "Cliente",
         title: "A tela do cliente concentra o contexto que destrava a proxima acao",
         lead:
-          "No fluxo do HTML, a consulta do cliente e o centro de gravidade da operacao: e ali que o assessor identifica se a conta existe, se o onboarding terminou e qual e a situacao patrimonial antes de falar de cambio ou produto.",
+          "Na operacao, a consulta do cliente e o centro de gravidade: e ali que o assessor identifica se a conta existe, se o onboarding terminou e qual e a situacao patrimonial antes de falar de cambio ou produto.",
         cards: [
           {
             title: "Caso 1: sem conta global",
@@ -747,7 +841,7 @@ module.exports = [
         section: "TOD no App",
         title: "TOD pelo aplicativo: a orientacao do assessor vira roteiro simples para o cliente",
         lead:
-          "O HTML transforma o cadastro de beneficiarios em um passo a passo objetivo. Depois de validar a conta global no HUB, o cliente pode concluir essa frente pelo proprio app da XP.",
+          "O cadastro de beneficiarios pode ser apresentado como um passo a passo objetivo. Depois de validar a conta global no HUB, o cliente pode concluir essa frente pelo proprio app da XP.",
         cards: [
           {
             title: "Passo a passo do cliente",
@@ -791,7 +885,7 @@ module.exports = [
         section: "Cambio",
         title: "Fluxo de cambio: da consulta ao clique em Fazer Cambio",
         lead:
-          "No HTML, o cambio e a ponte entre o saldo em reais e o funding da conta internacional. O processo e simples, mas depende de conferencia operacional disciplinada antes do envio.",
+          "O cambio e a ponte entre o saldo em reais e o funding da conta internacional. O processo e simples, mas depende de conferencia operacional disciplinada antes do envio.",
         cards: [
           {
             title: "Checklist antes do envio",
@@ -835,7 +929,7 @@ module.exports = [
         section: "Produtos",
         title: "Depois do funding, o HUB vira ponto de distribuicao da carteira internacional",
         lead:
-          "A prateleira de produtos do HTML mostra que o processo nao termina no cambio. O assessor precisa converter a conta abastecida em uma proposta concreta de alocacao e envio ao cliente.",
+          "A prateleira de produtos mostra que o processo nao termina no cambio. O assessor precisa converter a conta abastecida em uma proposta concreta de alocacao e envio ao cliente.",
         cards: [
           {
             title: "O que o assessor encontra",
@@ -867,7 +961,7 @@ module.exports = [
         section: "Acompanhamento",
         title: "A Central de Operacoes fecha o ciclo com monitoramento de cambio e pushs",
         lead:
-          "O encerramento do HTML mostra que a visibilidade pos-operacao e parte da propria experiencia do assessor. O controle do status evita perder timing e reduz a necessidade de consultas dispersas.",
+          "A visibilidade pos-operacao e parte da propria experiencia do assessor. O controle do status evita perder timing e reduz a necessidade de consultas dispersas.",
         cards: [
           {
             title: "Depois da execucao",

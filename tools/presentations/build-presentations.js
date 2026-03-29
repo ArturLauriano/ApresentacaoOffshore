@@ -29,6 +29,132 @@ function absPath(relativePath) {
   return path.join(ROOT, relativePath);
 }
 
+function decodeHtmlEntities(text) {
+  return String(text || "")
+    .replace(/&nbsp;/gi, " ")
+    .replace(/&amp;/gi, "&")
+    .replace(/&quot;/gi, '"')
+    .replace(/&#39;/gi, "'")
+    .replace(/&lt;/gi, "<")
+    .replace(/&gt;/gi, ">")
+    .replace(/&#(\d+);/g, (_match, code) => String.fromCharCode(Number(code)))
+    .replace(/&#x([0-9a-f]+);/gi, (_match, code) =>
+      String.fromCharCode(parseInt(code, 16))
+    );
+}
+
+function normalizeKey(text) {
+  return String(text || "")
+    .normalize("NFD")
+    .replace(/\p{Diacritic}/gu, "")
+    .toLowerCase()
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function extractAttribute(tag, attributeName) {
+  const match = tag.match(
+    new RegExp(
+      `${attributeName}\\s*=\\s*(?:"([^"]*)"|'([^']*)'|([^\\s>]+))`,
+      "i"
+    )
+  );
+  return decodeHtmlEntities(match?.[1] || match?.[2] || match?.[3] || "");
+}
+
+function loadHtmlImages(deck) {
+  if (deck._htmlImages) {
+    return deck._htmlImages;
+  }
+
+  const htmlPath = absPath(deck.htmlFile);
+  const html = fs.readFileSync(htmlPath, "utf8");
+  const tags = html.match(/<img\b[^>]*>/gi) || [];
+  const htmlDir = path.dirname(htmlPath);
+
+  deck._htmlImages = tags
+    .map((tag, index) => {
+      const src = extractAttribute(tag, "src");
+      const alt = extractAttribute(tag, "alt");
+      return {
+        index,
+        src,
+        alt,
+        normalizedAlt: normalizeKey(alt),
+        htmlDir,
+      };
+    })
+    .filter((image) => {
+      if (!image.src) {
+        return false;
+      }
+      if (image.src.includes("assets/logos/")) {
+        return false;
+      }
+      if (normalizeKey(image.alt).includes("alta vista")) {
+        return false;
+      }
+      return true;
+    });
+
+  return deck._htmlImages;
+}
+
+function resolveImageSource(deck, imageSpec) {
+  if (imageSpec.path) {
+    const fullPath = absPath(imageSpec.path);
+    if (!fs.existsSync(fullPath)) {
+      throw new Error(`Imagem nao encontrada: ${fullPath}`);
+    }
+    return { kind: "path", value: fullPath, alt: imageSpec.caption || "" };
+  }
+
+  if (imageSpec.htmlAlt || Number.isInteger(imageSpec.htmlIndex)) {
+    const htmlImages = loadHtmlImages(deck);
+    let match = null;
+
+    if (Number.isInteger(imageSpec.htmlIndex)) {
+      match = htmlImages[imageSpec.htmlIndex] || null;
+    } else {
+      const target = normalizeKey(imageSpec.htmlAlt);
+      match =
+        htmlImages.find((image) => image.normalizedAlt === target) ||
+        htmlImages.find((image) => image.normalizedAlt.includes(target)) ||
+        htmlImages.find((image) => target.includes(image.normalizedAlt)) ||
+        null;
+    }
+
+    if (!match) {
+      throw new Error(
+        `Imagem do HTML nao encontrada para referencia: ${imageSpec.htmlAlt ?? imageSpec.htmlIndex}`
+      );
+    }
+
+    if (match.src.startsWith("data:")) {
+      return { kind: "data", value: match.src, alt: match.alt };
+    }
+
+    const fullPath = path.resolve(match.htmlDir, match.src);
+    if (!fs.existsSync(fullPath)) {
+      throw new Error(`Imagem nao encontrada: ${fullPath}`);
+    }
+    return { kind: "path", value: fullPath, alt: match.alt };
+  }
+
+  throw new Error("Imagem sem path, htmlAlt ou htmlIndex.");
+}
+
+function addResolvedImage(slide, deck, imageSpec, x, y, w, h) {
+  const source = resolveImageSource(deck, imageSpec);
+  const size = imageSizingContain(source.value, x, y, w, h);
+  if (source.kind === "data") {
+    slide.addImage({ data: source.value, ...size });
+  } else {
+    slide.addImage({ path: source.value, ...size });
+  }
+  return source;
+}
+
 function removeMeasurementFields(options) {
   const clone = { ...options };
   for (const field of ["mode", "minFontSize", "maxFontSize", "padding", "leading"]) {
@@ -251,6 +377,7 @@ function addSlideTitle(slide, deck, spec) {
 
 function addCard(slide, deck, card, x, y, w, h, options = {}) {
   const palette = tonePalette(deck.theme, card.tone);
+  // Text is intentionally layered inside this rounded card background.
   slide.addShape(PptxGenJS.ShapeType.roundRect, {
     x,
     y,
@@ -462,7 +589,7 @@ function renderCoverSlide(pptx, deck) {
     gap: 0.1,
   });
 
-  slide.addText("Baseado no conteudo do HTML publicado no projeto.", {
+  slide.addText("Alta Vista Investimentos | Material de apoio", {
     x: 0.86,
     y: 6.95,
     w: 4.6,
@@ -517,6 +644,7 @@ function renderStatsSlide(pptx, deck, spec, slideNumber) {
     addStatCard(slide, deck, stat, 0.78 + index * (statW + gap), statsY, statW, 1.18, index);
   });
 
+  // These bottom panels are content containers; text overlap with the card is intentional.
   slide.addShape(PptxGenJS.ShapeType.roundRect, {
     x: 0.78,
     y: 3.62,
@@ -597,6 +725,7 @@ function renderProcessSlide(pptx, deck, spec, slideNumber) {
 
   steps.forEach((step, index) => {
     const x = 0.78 + index * (stepW + gap);
+    // Each step uses a background card behind the title and bullets on purpose.
     slide.addShape(PptxGenJS.ShapeType.roundRect, {
       x,
       y: stepY,
@@ -650,6 +779,7 @@ function renderProcessSlide(pptx, deck, spec, slideNumber) {
     });
   });
 
+  // Summary copy intentionally sits inside this warm highlight panel.
   slide.addShape(PptxGenJS.ShapeType.roundRect, {
     x: 0.78,
     y: 5.22,
@@ -721,10 +851,7 @@ function renderGallerySlide(pptx, deck, spec, slideNumber) {
 
   images.forEach((image, index) => {
     const x = 0.78 + index * (imageW + imageGap);
-    const fullPath = absPath(image.path);
-    if (!fs.existsSync(fullPath)) {
-      throw new Error(`Imagem nao encontrada: ${fullPath}`);
-    }
+    // Image caption is intentionally anchored inside the preview card.
     slide.addShape(PptxGenJS.ShapeType.roundRect, {
       x,
       y: imageY,
@@ -735,10 +862,15 @@ function renderGallerySlide(pptx, deck, spec, slideNumber) {
       line: { color: deck.theme.border, width: 1 },
       shadow: safeOuterShadow(deck.theme.dark, 0.08, 45, 2, 1),
     });
-    slide.addImage({
-      path: fullPath,
-      ...imageSizingContain(fullPath, x + 0.12, imageY + 0.12, imageW - 0.24, imageH - 0.56),
-    });
+    const source = addResolvedImage(
+      slide,
+      deck,
+      image,
+      x + 0.12,
+      imageY + 0.12,
+      imageW - 0.24,
+      imageH - 0.56
+    );
     slide.addText(image.caption, {
       x: x + 0.14,
       y: imageY + imageH - 0.3,
@@ -746,6 +878,74 @@ function renderGallerySlide(pptx, deck, spec, slideNumber) {
       h: 0.18,
       fontFace: BODY_FONT,
       fontSize: 9.2,
+      color: deck.theme.muted,
+      align: "center",
+      margin: 0,
+    });
+  });
+
+  finishSlide(slide, pptx);
+}
+
+function renderImageGridSlide(pptx, deck, spec, slideNumber) {
+  const slide = pptx.addSlide();
+  addChrome(slide, deck, slideNumber, spec.section);
+  const contentY = addSlideTitle(slide, deck, spec);
+
+  const images = spec.images || [];
+  if (images.length === 0) {
+    finishSlide(slide, pptx);
+    return;
+  }
+
+  const columns =
+    spec.columns || (images.length === 1 ? 1 : images.length === 4 ? 2 : 2);
+  const rows = Math.ceil(images.length / columns);
+  const gapX = 0.22;
+  const gapY = 0.22;
+  const regionX = 0.78;
+  const regionY = contentY + 0.08;
+  const regionW = 11.78;
+  const regionH = 6.48 - regionY;
+  const cardW = (regionW - gapX * (columns - 1)) / columns;
+  const cardH = (regionH - gapY * (rows - 1)) / rows;
+
+  images.forEach((image, index) => {
+    const row = Math.floor(index / columns);
+    const col = index % columns;
+    const x = regionX + col * (cardW + gapX);
+    const y = regionY + row * (cardH + gapY);
+    const caption = image.caption || image.htmlAlt || "";
+
+    // Chart/table screenshots and their captions intentionally share the same card.
+    slide.addShape(PptxGenJS.ShapeType.roundRect, {
+      x,
+      y,
+      w: cardW,
+      h: cardH,
+      rectRadius: 0.08,
+      fill: { color: "FFFFFF" },
+      line: { color: deck.theme.border, width: 1 },
+      shadow: safeOuterShadow(deck.theme.dark, 0.08, 45, 2, 1),
+    });
+
+    addResolvedImage(
+      slide,
+      deck,
+      image,
+      x + 0.12,
+      y + 0.12,
+      cardW - 0.24,
+      cardH - 0.54
+    );
+
+    slide.addText(caption, {
+      x: x + 0.14,
+      y: y + cardH - 0.28,
+      w: cardW - 0.28,
+      h: 0.18,
+      fontFace: BODY_FONT,
+      fontSize: 9.1,
       color: deck.theme.muted,
       align: "center",
       margin: 0,
@@ -789,6 +989,9 @@ async function buildDeck(deck) {
         break;
       case "gallery":
         renderGallerySlide(pptx, deck, spec, slideNumber);
+        break;
+      case "imageGrid":
+        renderImageGridSlide(pptx, deck, spec, slideNumber);
         break;
       default:
         throw new Error(`Tipo de slide nao suportado: ${spec.type}`);
