@@ -8,422 +8,434 @@ module.exports = [
     shortName: "Diversificacao Internacional",
     theme: {
       bg: "FAF8F4",
-      warm: "F5F0E8",
       dark: "1B2A3D",
       navy: "243447",
       gold: "C4963C",
       goldLight: "D4A94E",
+      warm: "F5F0E8",
+      surface: "FFFDFC",
       text: "2C3E50",
       muted: "6B7B8D",
       border: "DDD5C8",
-      blue: "2980B9",
-      green: "27AE60",
-      red: "C0392B",
+    },
+    fonts: {
+      title: "DM Serif Display",
+      body: "Source Sans 3",
     },
     cover: {
       eyebrow: "Alta Vista Investimentos | Guia do Cliente",
-      title: "Por que Diversificar Alem do Brasil?",
+      title: "Por que Diversificar Al\u00E9m do Brasil?",
+      titleRuns: [
+        { text: "Por que Diversificar ", options: { color: "FFFFFF" } },
+        { text: "Al\u00E9m", options: { color: "D4A94E" } },
+        { text: " do Brasil?", options: { color: "FFFFFF" } },
+      ],
       subtitle:
-        "Uma apresentacao estruturada para explicar o custo do vies local, o papel do dolar e como o acesso internacional ficou mais simples.",
-      chips: [
-        "Diversificacao real",
-        "Protecao em moeda forte",
-        "Acesso mais simples",
-      ],
-      panelTitle: "O que o deck cobre",
-      panelItems: [
-        "Por que concentrar 100% no Brasil reduz o universo investivel.",
-        "Como risco Brasil, cambio e setores afetam a carteira.",
-        "O que mudou em acesso, tributacao e sucessao.",
-        "Como iniciar a alocacao internacional com menos complexidade.",
-      ],
+        "Um deck visual para explicar concentracao local, dolar, risco Brasil e o ganho de acesso ao mercado global.",
+      chips: ["Mercado global", "Protecao cambial", "Acesso simplificado"],
+      notes:
+        "Mensagem central: investir apenas no Brasil restringe o universo investivel, concentra risco em uma unica moeda e deixa a carteira dependente do mesmo ciclo domestico. Use este slide para abrir a conversa e preparar o racional dos proximos graficos.",
     },
     slides: [
       {
-        type: "cards",
+        layout: "statement",
         section: "Tese Central",
-        title: "A discussao nao e sobre moda, e sobre fronteira de carteira",
-        lead:
-          "A tese central e simples: investir so no Brasil restringe oportunidades, concentra riscos e deixa a carteira dependente da mesma moeda, dos mesmos setores e do mesmo ciclo domestico.",
-        cards: [
-          {
-            title: "Problema do vies local",
-            tone: "gold",
-            items: [
-              "Concentrar 100% do patrimonio no Brasil comprime o universo investivel.",
-              "O investidor assume risco Brasil sem perceber.",
-              "A carteira fica dependente de poucos setores e da mesma moeda.",
-            ],
-          },
-          {
-            title: "O que muda com exterior",
-            tone: "blue",
-            items: [
-              "Acesso a empresas, titulos e moedas que o mercado local nao oferece.",
-              "Protecao parcial em crises domesticas e mais opcao de renda em dolar.",
-              "Mais ferramentas para sucessao e planejamento patrimonial.",
-            ],
-          },
-          {
-            title: "Mensagem central",
-            tone: "green",
-            items: [
-              "Diversificar fora deixou de ser privilegio de poucos.",
-              "Tributacao e sucessao ficaram mais administraveis.",
-              "A alocacao pode comecar simples e evoluir com o patrimonio.",
-            ],
-          },
-        ],
+        title:
+          "Diversificacao internacional amplia o universo de investimento da carteira",
+        kicker:
+          "Ao incluir ativos internacionais, a carteira passa a acessar mais emissores, setores, moedas e geografias do que o mercado local, sozinho, consegue oferecer.",
+        body:
+          "Na pratica, isso reduz a concentracao em uma unica economia, torna a alocacao mais previsivel em seus vetores de risco e amplia a capacidade de buscar retornos mais eficientes em relacao ao risco assumido.",
+        notes:
+          "A tese central do HTML e de ampliacao de fronteira investivel. O cliente nao precisa abandonar Brasil; precisa abrir acesso para um universo maior de emissores, setores, geografias e moedas, reduzindo a dependencia estrutural do mesmo ciclo domestico.",
       },
       {
-        type: "stats",
+        layout: "image-full",
         section: "Mercado Global",
-        title: "Brasil e uma fatia pequena do mercado global",
-        lead:
-          "Aplicar 100% do patrimonio no mercado domestico significa aceitar uma concentracao estrutural em um recorte muito pequeno do mercado mundial de acoes e de renda fixa.",
-        stats: [
-          { value: "0,4%", label: "Peso do Brasil no MSCI ACWI" },
-          { value: "4,1%", label: "Peso no MSCI Mercados Emergentes" },
-          { value: "2,1%", label: "Participacao no PIB do G20" },
-          { value: "0,6%", label: "Peso em bonds corporativos globais" },
-        ],
-        bulletsTitle: "Leituras-chave",
-        bullets: [
-          "Ficar so no Brasil equivale a ignorar 99,6% do mercado global de acoes.",
-          "Mesmo na renda fixa, o investidor fica restrito a um universo muito pequeno de emissores, ratings e moedas.",
-          "O conforto domestico mascara uma concentracao severa de risco e de oportunidade perdida.",
-        ],
-        callout: {
-          title: "Vies local e estrutural",
-          body:
-            "A sensacao de diversificacao local engana. A carteira parece ampla em reais, mas continua estreita quando medida contra o mercado global.",
+        title: "Brasil e uma fatia muito pequena do mercado global",
+        image: {
+          htmlAlt: "Participacao do Brasil nos indices MSCI e no PIB do G20",
         },
+        notes:
+          "Use o grafico para mostrar que ficar 100 por cento no Brasil equivale a aceitar um recorte muito pequeno do mercado mundial. O investidor sente conforto domestico, mas assume concentracao severa.",
       },
       {
-        type: "imageGrid",
+        layout: "image-full",
         section: "Mercado Global",
-        title: "As imagens reforcam o tamanho da concentracao domestica",
-        lead:
-          "Os graficos deixam claro como o Brasil representa uma parcela pequena do mercado global e como o vies local comprime o universo investivel.",
-        columns: 2,
-        images: [
-          {
-            htmlAlt: "Participacao do Brasil nos indices MSCI e no PIB do G20",
-            caption: "Participacao do Brasil nos indices MSCI e no PIB do G20.",
-          },
-          {
-            htmlAlt: "Tamanho do mercado de titulos corporativos",
-            caption: "Mercado global de titulos corporativos versus mercado brasileiro.",
-          },
-          {
-            htmlAlt: "J.P. Morgan: Local investing and global opportunities",
-            caption: "Comparacao entre vies local e oportunidades globais.",
-          },
-          {
-            htmlAlt: "Alocacao dos investidores em acoes internacionais por pais",
-            caption: "Alocacao internacional por pais evidencia o atraso relativo do investidor brasileiro.",
-          },
-        ],
-      },
-      {
-        type: "cards",
-        section: "Setores",
-        title: "O mundo mudou de lideranca setorial, o Ibovespa muito menos",
-        lead:
-          "A comparacao de 25 anos entre Brasil e Estados Unidos reforca que a concentracao domestica nao e so geografica; ela tambem limita exposicao aos setores que mais criaram valor no ciclo recente.",
-        cards: [
-          {
-            title: "Ibovespa",
-            tone: "red",
-            items: [
-              "Petrobras, Vale, bancos e commodities seguem dominando a bolsa local.",
-              "A lista das maiores empresas mudou pouco ao longo de 25 anos.",
-              "Tecnologia global quase nao aparece na carteira brasileira tradicional.",
-            ],
-          },
-          {
-            title: "S&P 500",
-            tone: "blue",
-            items: [
-              "NVIDIA, Microsoft, Apple, Amazon e Alphabet lideram a nova economia.",
-              "Semicondutores, software, cloud e plataformas ganharam peso.",
-              "Grande parte da geracao de retorno global veio de fora do Brasil.",
-            ],
-          },
-          {
-            title: "Implicacao para a carteira",
-            tone: "gold",
-            items: [
-              "Ficar so no Brasil reduz exposicao a IA, biotech, cloud e plataformas digitais.",
-              "A America Latina representa so 1% do setor global de tecnologia.",
-              "A diversificacao setorial depende de abrir o leque internacional.",
-            ],
-          },
-        ],
-      },
-      {
-        type: "imageGrid",
-        section: "Setores",
-        title: "A comparacao visual entre lideres de mercado deixa o gap mais claro",
-        lead:
-          "Quando se observa a mudanca nas maiores empresas do mundo ao longo do tempo, fica evidente como a bolsa brasileira permaneceu concentrada em setores maduros enquanto a lideranca global migrou para tecnologia e inovacao.",
-        columns: 1,
-        images: [
-          {
-            htmlAlt: "Maiores empresas: Ibovespa vs S&P 500 ao longo do tempo",
-            caption: "Maiores empresas: Ibovespa versus S&P 500 ao longo do tempo.",
-          },
-        ],
-      },
-      {
-        type: "stats",
-        section: "Risco Brasil",
-        title: "O CDI parece estavel, mas nao elimina risco Brasil",
-        lead:
-          "Medir tudo em reais faz o investidor subestimar o risco soberano, o impacto da moeda e a perda de poder de compra em dolar.",
-        stats: [
-          { value: "141,5", label: "CDS de 5 anos do Brasil" },
-          { value: "BB / Ba1", label: "Rating soberano atual" },
-          { value: "Top 4", label: "Entre os maiores CDS do grupo comparado" },
-          { value: "BRL", label: "Moeda fragil em ciclos longos" },
-        ],
-        bulletsTitle: "O que isso significa",
-        bullets: [
-          "O mercado global precifica o Brasil como um risco de credito elevado entre economias relevantes.",
-          "O ganho nominal do CDI pode esconder perda de poder de compra quando a referencia correta e moeda forte.",
-          "Risco fiscal, cambial e setorial continuam concentrados na mesma carteira.",
-        ],
-        callout: {
-          title: "Estabilidade local nao e neutralidade",
-          body:
-            "A estabilidade percebida do CDI nao remove o risco do pais nem a volatilidade cambial acumulada no patrimonio medido em dolar.",
+        title:
+          "Renda fixa global: o investidor brasileiro acessa so uma fracao do mercado",
+        image: {
+          htmlAlt: "Tamanho do mercado de titulos corporativos",
         },
+        frame: {
+          x: 1.18,
+          y: 2.06,
+          w: 10.98,
+          h: 4.82,
+        },
+        notes:
+          "Este slide deve reproduzir a logica do HTML: mesmo na renda fixa, onde o investidor brasileiro se sente mais confortavel, a profundidade do mercado local e pequena frente ao mercado global de credito corporativo.",
       },
       {
-        type: "imageGrid",
+        layout: "image-full",
+        section: "Mercado Global",
+        title: "O mercado global oferece uma fronteira muito mais ampla de oportunidades",
+        image: {
+          htmlAlt: "J.P. Morgan: Local investing and global opportunities",
+        },
+        frame: {
+          x: 1.08,
+          y: 2.04,
+          w: 11.12,
+          h: 4.84,
+        },
+        notes:
+          "Use a imagem do J.P. Morgan como ponte narrativa: o investidor domestico costuma olhar o mesmo jardim de sempre, enquanto o mercado global abre acesso a muito mais classes, regioes e combinacoes de risco e retorno.",
+      },
+      {
+        layout: "image-full",
+        section: "Mercado Global",
+        title: "Acoes internacionais: o investidor brasileiro ainda aloca muito pouco",
+        image: {
+          htmlAlt: "Alocacao dos investidores em acoes internacionais por pais",
+        },
+        frame: {
+          x: 1.14,
+          y: 2.06,
+          w: 11.04,
+          h: 4.82,
+        },
+        notes:
+          "A mensagem aqui e de vies domestico. Em comparacao internacional, o investidor brasileiro ainda mantem pouca exposicao a acoes globais, mesmo com o mercado local representando uma parcela pequena do universo investivel.",
+      },
+      {
+        layout: "image-full",
+        section: "Setores",
+        title: "Setores: O Mundo se Transformou, o Brasil Ficou Parado",
+        image: {
+          htmlAlt: "Maiores empresas: Ibovespa vs S&P 500 ao longo do tempo",
+        },
+        notes:
+          "Mostre a diferenca entre uma bolsa ainda dominada por bancos, commodities e Petrobras/Vale versus o S and P 500 com tecnologia, plataformas, cloud, semicondutores e IA. A diversificacao geografica tambem e setorial.",
+      },
+      {
+        layout: "image-pair",
         section: "Risco Brasil",
-        title: "Os indicadores visuais ajudam a traduzir o risco soberano",
-        lead:
-          "Os comparativos de CDS e de rating mostram por que o risco Brasil nao pode ser tratado como neutro quando a carteira esta quase toda concentrada no mercado domestico.",
-        columns: 2,
+        title: "Risco Brasil: A Ilus\u00E3o da Estabilidade do CDI",
         images: [
           {
             htmlAlt: "CDS 5 anos por pais",
-            caption: "CDS de 5 anos por pais comparaveis.",
+            caption: "CDS 5 anos",
           },
           {
             htmlAlt: "Paises com rating melhor que o Brasil",
-            caption: "Paises com rating superior ao do Brasil.",
+            caption: "Rating soberano",
           },
         ],
+        notes:
+          "O ponto aqui e mostrar que estabilidade percebida em reais nao significa neutralidade. O mercado global continua precificando o Brasil como risco relevante e isso afeta patrimonio concentrado localmente.",
       },
       {
-        type: "stats",
-        section: "Retornos",
-        title: "Retornos globais em perspectiva mostram o custo da concentracao",
-        lead:
-          "A simulacao compara tres trajetorias para US$ 100 mil e evidencia como o patrimonio pode crescer em reais, mas ficar para tras frente a ativos globais mais eficientes.",
-        stats: [
-          { value: "US$ 281 mil", label: "CDI convertido em dolar" },
-          { value: "US$ 471 mil", label: "Portfolio global 60/40" },
-          { value: "US$ 807 mil", label: "S&P 500" },
+        layout: "bars-horizontal",
+        section: "Moedas",
+        title: "Deprecia\u00E7\u00E3o de Moedas Frente ao D\u00F3lar (\u00FAltimos 10 anos)",
+        bars: [
+          { label: "Peso Argentino", value: -98.3, display: "-98,3%" },
+          { label: "Lira Turca", value: -93.0, display: "-93,0%" },
+          {
+            label: "Real Brasileiro",
+            value: -60.0,
+            display: "~ -60%",
+            highlight: true,
+          },
+          { label: "Peso Colombiano", value: -51.5, display: "-51,5%" },
+          { label: "Rand Sul-Africano", value: -45.0, display: "~ -45%" },
+          { label: "Iene Japones", value: -30.9, display: "-30,9%" },
+          { label: "Dolar Australiano", value: -26.8, display: "-26,8%" },
+          { label: "Peso Mexicano", value: -24.6, display: "-24,6%" },
+          { label: "Libra Esterlina", value: -21.3, display: "-21,3%" },
+          { label: "Euro", value: -18.0, display: "~ -18%" },
         ],
-        bulletsTitle: "Leitura correta dos numeros",
-        bullets: [
-          "A comparacao relevante e em moeda forte, nao apenas em retorno nominal em reais.",
-          "Ativos globais entregaram maior acumulacao com menor dependencia do risco Brasil.",
-          "Diversificacao externa pode melhorar retorno esperado e preservar poder de compra no longo prazo.",
-        ],
-        callout: {
-          title: "Nao basta ganhar em reais",
-          body:
-            "Patrimonio mais rico em reais ainda pode estar relativamente mais pobre quando comparado a alternativas internacionais mais eficientes.",
-        },
+        notes:
+          "Este slide entra logo depois de CDS e rating para mostrar que o risco Brasil nao esta so no soberano. Ele tambem aparece na moeda e no poder de compra internacional do patrimonio.",
       },
       {
-        type: "imageGrid",
+        layout: "image-stack",
         section: "Retornos",
-        title: "Os graficos de retorno deixam a diferenca de acumulacao mais tangivel",
-        lead:
-          "As imagens comparativas ajudam a enxergar o que acontece quando a mesma base de capital segue trajetorias diferentes em dolar ao longo do tempo.",
-        columns: 2,
+        title: "Retornos Globais em Perspectiva",
         images: [
           {
             htmlAlt: "Comparacao de retornos: CDI vs 60/40 vs S&P 500",
-            caption: "Comparacao de retornos entre CDI, portfolio 60/40 e S&P 500.",
+            caption: "CDI vs 60/40 vs S&P 500",
           },
           {
             htmlAlt: "Evolucao nominal de US$ 100k em 20 anos",
-            caption: "Evolucao nominal de US$ 100 mil ao longo de 20 anos.",
+            caption: "Evolucao nominal de US$ 100 mil em 20 anos",
           },
         ],
+        frame: {
+          x: 1.62,
+          y: 2.08,
+          w: 10.1,
+        },
+        topHeight: 2.02,
+        bottomHeight: 2.24,
+        gap: 0.08,
+        notes:
+          "O pedido do deck aqui e visual: primeiro a comparacao de retornos, depois a evolucao do patrimonio em dolar como continuidade da mesma historia. A leitura e que ganhar em reais nao basta quando a referencia patrimonial e moeda forte.",
       },
       {
-        type: "cards",
+        layout: "image-full",
+        section: "Risco vs. Retorno",
+        title: "Risco vs. Retorno: A Inefici\u00EAncia dos Ativos Brasileiros",
+        image: {
+          htmlAlt: "Retorno acumulado vs volatilidade anualizada - 20 anos",
+        },
+        frame: {
+          x: 1.24,
+          y: 2.04,
+          w: 10.86,
+          h: 4.84,
+        },
+        notes:
+          "Este slide fica sozinho para dar peso ao argumento. Em dolar, os ativos brasileiros aparecem piores na combinacao risco-retorno do que diversas alternativas globais.",
+      },
+      {
+        layout: "image-full",
         section: "Protecao",
-        title: "Risco-retorno e dolar cumprem papeis complementares",
-        lead:
-          "Dois pontos se reforcam: ativos brasileiros dolarizados tiveram uma relacao risco-retorno inferior, e uma parcela conservadora em dolar historicamente protegeu a carteira nos piores momentos locais.",
+        title: "O D\u00F3lar como Prote\u00E7\u00E3o em Momentos de Crise",
+        image: {
+          htmlAlt: "Dolar vs benchmarks Brasil - Retorno anual",
+        },
+        frame: {
+          x: 1.24,
+          y: 2.04,
+          w: 10.86,
+          h: 4.84,
+        },
+        notes:
+          "Aqui a narrativa deve ser de hedge natural. Nos anos de estresse local, a exposicao dolarizada funcionou como amortecedor relevante em reais.",
+      },
+      {
+        layout: "timeline",
+        section: "Acesso",
+        title: "O que Mudou: De Privil\u00E9gio a Acess\u00EDvel",
+        items: [
+          {
+            year: "Antes de 2018",
+            title: "Mercado restrito",
+            body:
+              "Exterior era assunto de clientes private, com minimos altos e processo operacional pesado.",
+          },
+          {
+            year: "2018-2021",
+            title: "Primeira abertura",
+            body:
+              "Plataformas focadas no investidor brasileiro comecam a reduzir barreiras e simplificar a entrada.",
+          },
+          {
+            year: "2022-2024",
+            title: "Infraestrutura melhora",
+            body:
+              "Cambio mais fluido, integracao com apps brasileiros e acesso mais amplo a mutual funds, bonds e treasuries.",
+          },
+          {
+            year: "2025-Hoje",
+            title: "Acesso virou rotina",
+            body:
+              "Conta mais simples, relatorios de IR, alternativas sem estate tax e assessoria para perfis diferentes.",
+          },
+        ],
+        notes:
+          "Use este slide como timeline curta. A mensagem e que o investidor brasileiro nao ficou sofisticado de repente; foi a infraestrutura que melhorou e transformou o exterior em algo operacionalmente acessivel.",
+      },
+      {
+        layout: "metrics",
+        section: "Tributacao e Sucessao",
+        title: "Tributa\u00E7\u00E3o e Sucess\u00E3o: O Problema que Tamb\u00E9m Ficou Mais Simples",
+        kicker:
+          "Hoje a conversa ficou objetiva: aliquota, dividendos, estate tax e TOD.",
+        metrics: [
+          { value: "15%", label: "Ganho de capital sobre o saldo liquido anual" },
+          {
+            value: "30%",
+            label: "Retencao na fonte sobre dividendos de acoes, ETFs e REITs dos EUA",
+          },
+          {
+            value: "US$ 60 mil",
+            label: "Faixa em que ativos de raiz americana entram no radar do estate tax",
+          },
+          {
+            value: "TOD",
+            label: "Designacao da conta para agilizar a transferencia sucessoria",
+          },
+        ],
+        notes:
+          "O objetivo aqui e simplificar a leitura para o cliente. Sem entrar em estruturas societarias, a conversa fica ancorada em quatro referencias praticas: ganho de capital, dividendos, estate tax e TOD.",
+      },
+      {
+        layout: "table",
+        section: "Tributacao e Sucessao",
+        title: "Ve\u00EDculo certo simplifica imposto e sucess\u00E3o",
+        headers: ["Veiculo", "Tributacao principal", "Atencao sucessoria"],
+        rows: [
+          [
+            "Mutual Funds Irlanda/Luxemburgo",
+            "Nao distribuem dividendos ao cotista e tendem a ser mais eficientes do que a exposicao direta a ETFs americanos.",
+            "Ficam fora do estate tax americano para nao residentes.",
+          ],
+          [
+            "Bonds, Treasuries e CDs",
+            "Permitem renda e preservacao em dolar com apuracao objetiva para a pessoa fisica.",
+            "Sao alternativas que nao entram no estate tax americano para nao residentes.",
+          ],
+          [
+            "Acoes, ETFs e REITs dos EUA",
+            "Dividendos sofrem retencao de 30% na fonte e o ganho de capital entra na regra anual de 15%.",
+            "Entram na base do estate tax acima de US$ 60 mil.",
+          ],
+        ],
+        notes:
+          "A ideia aqui e reproduzir a leitura pratica do HTML e da apresentacao de tributacao: antes de pensar em estrutura complexa, o cliente precisa entender que o veiculo escolhido altera eficiencia tributaria e risco sucessorio.",
+      },
+      {
+        layout: "cards",
+        section: "Estate Tax",
+        title: "Quais ativos entram no Estate Tax e quais ficam fora",
         cards: [
           {
-            title: "Ineficiencia dos ativos brasileiros",
+            tag: "Sujeitos",
             tone: "red",
-            items: [
-              "Em dolar, os ativos brasileiros ficaram na area fraca do grafico risco-retorno.",
-              "Mais volatilidade nao se traduziu em melhor premio de retorno.",
-              "Diversificar e melhorar a fronteira eficiente da carteira.",
-            ],
+            title: "Entram no estate tax",
+            body:
+              "Acoes americanas, ETFs domiciliados nos EUA e REITs entram na base de calculo para nao residentes.",
           },
           {
-            title: "Dolar como hedge",
-            tone: "blue",
-            items: [
-              "Uma alocacao conservadora em dolar ajudou a equilibrar a carteira em crises locais.",
-              "Protecao cambial e diversificacao setorial nao sao substitutos; eles se somam.",
-              "A moeda forte tende a responder quando os ativos locais sofrem.",
-            ],
-          },
-          {
-            title: "Anos emblematicos",
-            tone: "gold",
-            items: [
-              "2015: +55% em reais.",
-              "2020: +34% em reais.",
-              "2024: +32% em reais.",
-            ],
+            tag: "Nao sujeitos",
+            tone: "green",
+            title: "Ficam fora desse risco",
+            body:
+              "Mutual Funds Irlanda/Luxemburgo, bonds individuais, Treasuries e CDs ajudam a afastar o risco sucessorio.",
           },
         ],
+        notes:
+          "A conta nao e o problema. O problema e o ativo com raiz americana acima da faixa relevante. Use o slide para separar risco sucessorio do simples fato de ter conta internacional.",
       },
       {
-        type: "imageGrid",
-        section: "Protecao",
-        title: "Risco-retorno e protecao cambial aparecem com clareza nos graficos",
-        lead:
-          "As imagens abaixo reforcam dois argumentos complementares: a baixa eficiencia dos ativos brasileiros em dolar e o papel do dolar como amortecedor em anos de maior estresse local.",
-        columns: 2,
-        images: [
-          {
-            htmlAlt: "Retorno acumulado vs volatilidade anualizada - 20 anos",
-            caption: "Retorno acumulado versus volatilidade anualizada em 20 anos.",
-          },
-          {
-            htmlAlt: "Dolar vs benchmarks Brasil - Retorno anual",
-            caption: "Dolar versus benchmarks brasileiros em retorno anual.",
-          },
+        layout: "table",
+        section: "Estate Tax",
+        title: "O imposto incide apenas sobre o excedente acima de US$ 60 mil",
+        headers: ["Base tributavel acima de US$ 60 mil", "Aliquota"],
+        rows: [
+          ["Ate US$ 10 mil", "18%"],
+          ["De US$ 10 mil ate US$ 20 mil", "20%"],
+          ["De US$ 20 mil ate US$ 40 mil", "22%"],
+          ["De US$ 40 mil ate US$ 60 mil", "24%"],
+          ["De US$ 60 mil ate US$ 80 mil", "26%"],
+          ["De US$ 80 mil ate US$ 100 mil", "28%"],
+          ["De US$ 100 mil ate US$ 150 mil", "30%"],
+          ["De US$ 150 mil ate US$ 250 mil", "32%"],
+          ["De US$ 250 mil ate US$ 500 mil", "34%"],
+          ["De US$ 500 mil ate US$ 750 mil", "36%"],
+          ["De US$ 750 mil ate US$ 1 milhao", "38%"],
+          ["Acima de US$ 1 milhao", "40%"],
         ],
+        footnote:
+          "Mensagem-chave: o risco nao desaparece porque a carteira e diversificada. O que reduz o problema e a combinacao entre veiculo correto, TOD preenchido e, em alguns casos, estrutura patrimonial.",
+        notes:
+          "Explique a progressividade e reforce que o Brasil nao possui tratado sucessorio com os Estados Unidos para ampliar a faixa de isencao do investidor brasileiro.",
       },
       {
-        type: "process",
-        section: "Acesso",
-        title: "O acesso internacional saiu do private e virou infraestrutura",
-        lead:
-          "A grande mudanca nao foi filosofica; foi operacional. Abertura de conta, cambio, suporte e relatorios ficaram mais integrados ao investidor brasileiro.",
+        layout: "image-full",
+        section: "Estate Tax",
+        title: "Estate Tax: como funciona para ativos de raiz americana",
+        image: {
+          path: "assets/tributacao/estate-tax.png",
+        },
+        frame: {
+          x: 2.16,
+          y: 2.08,
+          w: 9.02,
+          h: 4.82,
+        },
+        notes:
+          "Use a mesma imagem do material de tributacao. Ela resolve melhor a explicacao do que um slide recriado com texto demais.",
+      },
+      {
+        layout: "steps",
+        section: "TOD",
+        title: "TOD: a provid\u00EAncia b\u00E1sica da conta internacional",
         steps: [
           {
-            title: "Antes",
-            items: [
-              "Patrimonio minimo elevado.",
-              "Documentacao extensa e pouca ajuda local.",
-            ],
+            number: "1",
+            title: "Designacao em vida",
+            body:
+              "O cliente registra antecipadamente quem recebera os ativos mantidos naquela conta internacional.",
           },
           {
-            title: "Plataformas",
-            items: [
-              "Avenue e XP Internacional reduziram a barreira de entrada.",
-              "Abertura e operacao ficaram mais acessiveis.",
-            ],
+            number: "2",
+            title: "Transferencia mais direta",
+            body:
+              "A corretora usa essa designacao para encaminhar a transferencia sem exigir o mesmo rito de inventario americano.",
           },
           {
-            title: "Infraestrutura",
-            items: [
-              "Cambio, custodia e relatorios ficaram mais integrados.",
-              "A friccao operacional caiu bastante.",
-            ],
-          },
-          {
-            title: "Hoje",
-            items: [
-              "Ja e possivel comecar menor e com mais suporte.",
-              "A decisao passa a ser como estruturar, nao se e viavel acessar.",
-            ],
+            number: "3",
+            title: "Menos custo e demora",
+            body:
+              "TOD ajuda a evitar probate e agiliza o processo, mas nao elimina estate tax se a carteira seguir exposta a ativos de raiz americana.",
           },
         ],
-        summaryTitle: "Mudanca de patamar",
-        summaryItems: [
-          "Baixar a barreira de acesso mudou a conversa: agora o foco e escolher o veiculo adequado para o objetivo, e nao apenas superar a dificuldade operacional.",
-        ],
+        notes:
+          "Este slide deve seguir a logica da apresentacao de tributacao: TOD resolve transferencia da conta, nao resolve sozinho o risco de estate tax.",
       },
       {
-        type: "cards",
-        section: "Tributacao e Sucessao",
-        title: "Tributacao, sucessao e PIC ficaram mais administraveis",
-        lead:
-          "Imposto, sucessao e tipo de veiculo precisam entrar cedo na conversa, mas hoje podem ser tratados com muito mais clareza do que no passado.",
-        cards: [
-          {
-            title: "Pessoa fisica",
-            tone: "green",
-            items: [
-              "Ganho de capital em reais com aliquota de 15% sobre o resultado liquido.",
-              "Prejuizos podem compensar ganhos futuros da mesma natureza.",
-              "Organizar vendas e a declaracao anual continua importante.",
-            ],
-          },
-          {
-            title: "Estate tax e TOD",
-            tone: "red",
-            items: [
-              "Ativos de raiz americana acima de US$ 60 mil entram no tema sucessorio.",
-              "O TOD agiliza a transferencia operacional da conta.",
-              "TOD nao elimina o estate tax, mas evita probate americano.",
-            ],
-          },
-          {
-            title: "PIC Offshore",
-            tone: "gold",
-            items: [
-              "Faz sentido quando patrimonio e complexidade patrimonial aumentam.",
-              "Pode neutralizar o risco sucessorio em estruturas especificas.",
-              "Nao costuma ser o ponto de partida da maioria dos investidores.",
-            ],
-          },
-        ],
+        layout: "image-full",
+        section: "Acesso",
+        title: "Hoje existem caminhos diferentes para perfis diferentes",
+        image: {
+          path: "assets/diversificacao/seguimentos.png",
+        },
+        frame: {
+          x: 2.06,
+          y: 2.12,
+          w: 9.2,
+          h: 4.78,
+        },
+        notes:
+          "Use o asset extraido do HTML diretamente no slide. A ideia aqui nao e reconstruir os cards, e sim preservar o visual que ja ficou bom na pagina.",
       },
       {
-        type: "cards",
+        layout: "steps",
         section: "Como Comecar",
-        title: "A alocacao internacional pode comecar simples e ganhar sofisticacao",
-        lead:
-          "A conclusao e pragmatica: definir o objetivo, iniciar com uma estrutura eficiente e aumentar a complexidade apenas quando patrimonio, sucessao e governanca justificarem.",
-        cards: [
+        title: "Primeiros Passos: Como Come\u00E7ar Sua Diversifica\u00E7\u00E3o Internacional",
+        steps: [
           {
-            title: "Conta internacional",
-            tone: "blue",
-            items: [
-              "Boa porta de entrada para acoes, ETFs, mutual funds, bonds e treasuries.",
-              "Abertura digital e cambio integrado reduzem friccao.",
-              "Resolve a maior parte dos casos iniciais.",
-            ],
+            number: "1",
+            title: "Definir o objetivo",
+            body:
+              "Decidir se a parcela internacional busca ampliar oportunidades, proteger em moeda forte, gerar renda ou organizar sucessao.",
           },
           {
-            title: "Atendimento patrimonial",
-            tone: "gold",
-            items: [
-              "Familias com patrimonio maior exigem apoio tributario, sucessorio e de governanca.",
-              "A conversa pode incluir estrutura offshore quando fizer sentido.",
-              "A solucao precisa acompanhar a complexidade do patrimonio.",
-            ],
+            number: "2",
+            title: "Escolher o caminho simples",
+            body:
+              "Na maioria dos casos, conta internacional com mutual funds globais e renda fixa em dolar ja resolve grande parte da necessidade.",
           },
           {
-            title: "Primeiros passos",
-            tone: "green",
-            items: [
-              "Definir objetivo: oportunidade, protecao, renda ou sucessao.",
-              "Comecar com veiculos eficientes e TOD preenchido.",
-              "Evoluir para estruturas mais sofisticadas apenas quando houver motivo patrimonial.",
-            ],
+            number: "3",
+            title: "Organizar imposto e sucessao",
+            body:
+              "Usar relatorios, preencher TOD e so adicionar complexidade quando o patrimonio realmente pedir.",
+          },
+          {
+            number: "4",
+            title: "Escalar aos poucos",
+            body:
+              "A alocacao internacional pode crescer gradualmente, com disciplina e revisao, ate ganhar peso natural no patrimonio.",
           },
         ],
+        notes:
+          "Fechamento do deck: o desafio principal deixou de ser operacional. O investidor consegue comecar pequeno, com mais clareza, e adicionar complexidade apenas se fizer sentido.",
       },
     ],
   },
@@ -434,239 +446,330 @@ module.exports = [
     shortName: "Tributacao Internacional",
     theme: {
       bg: "FAF7F2",
-      warm: "F7EFE2",
       dark: "132235",
       navy: "1B3045",
       gold: "C4963C",
       goldLight: "E6C57D",
+      warm: "F7EFE2",
+      surface: "FFFDFC",
       text: "2B3A48",
       muted: "67788A",
       border: "DDD1BF",
-      blue: "2F6F9E",
-      green: "31875A",
-      red: "B75449",
+    },
+    fonts: {
+      title: "DM Serif Display",
+      body: "Source Sans 3",
     },
     cover: {
       eyebrow: "Alta Vista Investimentos | Guia do Cliente",
       title: "Tributacao de Investimentos Internacionais",
       subtitle:
-        "Deck em PowerPoint estruturado para resumir aliquotas, risco sucessorio, TOD e quando a conversa evolui para uma PIC offshore.",
-      chips: [
-        "Ganho de capital",
-        "Estate tax",
-        "TOD e PIC",
-      ],
-      panelTitle: "Perguntas que o deck responde",
-      panelItems: [
-        "Como a pessoa fisica residente no Brasil e tributada ao investir fora.",
-        "Quais ativos entram no estate tax americano.",
-        "O que o TOD resolve e o que ele nao resolve.",
-        "Quando faz sentido discutir uma PIC offshore.",
-      ],
+        "Um deck visual sobre ganho de capital, dividendos, estate tax, TOD e quando a PIC entra na conversa patrimonial.",
+      chips: ["15% ganho de capital", "30% dividendos EUA", "Estate tax e TOD"],
+      notes:
+        "Abra explicando que o tema nao e decorar siglas. O ponto e entender como veiculo, jurisdicao e sucessao mudam retorno liquido e risco patrimonial.",
     },
     slides: [
       {
-        type: "cards",
-        section: "Primeiro Dolar",
-        title: "A eficiencia da carteira depende de tres decisoes antes do retorno",
-        lead:
-          "A analise nao comeca no ticker. Veiculo, jurisdicao e estrutura sucessoria alteram o retorno liquido, o risco patrimonial e a complexidade para a familia.",
-        cards: [
-          {
-            title: "Veiculo",
-            tone: "blue",
-            items: [
-              "Ativo direto, mutual fund ou renda fixa internacional mudam tributacao e compounding.",
-              "A classe de ativo importa, mas o envelope juridico importa tanto quanto.",
-            ],
-          },
-          {
-            title: "Jurisidicao",
-            tone: "gold",
-            items: [
-              "Nem todo ativo em dolar carrega o mesmo risco sucessorio.",
-              "Raiz americana e a variavel critica para estate tax.",
-            ],
-          },
-          {
-            title: "Sucessao",
-            tone: "red",
-            items: [
-              "TOD, leitura da raiz americana e eventual PIC mudam o risco da familia.",
-              "O primeiro dolar ja deveria nascer com essa reflexao.",
-            ],
-          },
-        ],
-      },
-      {
-        type: "stats",
-        section: "Aliquotas",
-        title: "A grande diferenca esta menos no ganho de capital e mais no fluxo de dividendos",
-        lead:
-          "Para a pessoa fisica residente no Brasil, a tributacao dos investimentos internacionais e mais linear do que muitos imaginam. O ponto de atencao aparece quando o produto distribui dividendos e quando o veiculo escolhido melhora ou piora esse atrito.",
-        stats: [
-          { value: "15%", label: "Ganho de capital em reais" },
+        layout: "metrics",
+        section: "Visao Geral",
+        title: "Tributacao e sucessao entram na decisao desde o primeiro dolar",
+        kicker: "Veiculo, jurisdicao e estrutura sucessoria alteram retorno liquido e complexidade patrimonial.",
+        metrics: [
+          { value: "15%", label: "Ganho de capital sobre saldo liquido" },
           { value: "30%", label: "Dividendos de acoes, ETFs e REITs dos EUA" },
-          { value: "15% / 0%", label: "Drag interno de mutual funds" },
-          { value: "Anual", label: "Pagamento no ajuste anual" },
+          { value: "US$ 60 mil", label: "Faixa de atencao para estate tax" },
+          { value: "US$ 500 mil+", label: "Faixa em que PIC entra na analise" },
         ],
-        bulletsTitle: "Como ler a regra",
-        bullets: [
-          "A apuracao considera o resultado em reais, ja refletindo a variacao cambial.",
-          "So ha imposto se o investidor vender com lucro ao longo do ano.",
-          "Prejuizos podem compensar ganhos futuros da mesma natureza.",
-        ],
-        callout: {
-          title: "Onde esta o divisor de aguas",
-          body:
-            "O ganho de capital e relativamente uniforme entre classes. O grande diferencial economico aparece no tratamento dos dividendos e no veiculo escolhido para investir.",
-        },
+        notes:
+          "Mensagem de abertura: a conversa nao comeca no ticker. Antes do ativo, importa o envelope juridico e como a familia ficara exposta a dividendos, estate tax e sucessao.",
       },
       {
-        type: "cards",
-        section: "Estate Tax",
-        title: "Ativos de raiz americana exigem leitura sucessoria desde o inicio",
-        lead:
-          "O estate tax em termos praticos mostra que o risco nao nasce da conta internacional em si, mas do tipo de ativo mantido dentro dela e do domicilio juridico desse ativo.",
+        layout: "cards",
+        section: "Visao Geral",
+        title: "Duas lentes praticas para montar a carteira",
         cards: [
           {
-            title: "Regra-base",
-            tone: "red",
-            items: [
-              "Faixa de isencao para nao residentes: US$ 60 mil.",
-              "A tributacao sobre o excedente pode chegar a 40%.",
-              "O Brasil nao possui tratado sucessorio com os Estados Unidos.",
-            ],
-          },
-          {
-            title: "Entram na base",
+            tag: "Premissa",
             tone: "gold",
-            items: [
-              "Acoes americanas.",
-              "ETFs domiciliados nos EUA.",
-              "REITs americanos.",
-            ],
+            title: "Ponto de partida",
+            body:
+              "Para a pessoa fisica residente no Brasil, o exterior exige leitura conjunta de ativo, veiculo, tributacao corrente e sucessao.",
           },
           {
-            title: "Afastam o risco",
-            tone: "green",
-            items: [
-              "Mutual funds da Irlanda ou de Luxemburgo.",
-              "Bonds individuais, Treasuries e CDs bancarios.",
-              "Estruturas patrimoniais quando o caso exigir.",
-            ],
-          },
-        ],
-      },
-      {
-        type: "cards",
-        section: "TOD",
-        title: "TOD e a camada operacional minima da sucessao",
-        lead:
-          "O Transfer on Death funciona como providencia basica da conta internacional: simples, barata e imediata, mas insuficiente se a carteira continuar carregando ativos de raiz americana acima do limite relevante.",
-        cards: [
-          {
-            title: "O que resolve",
+            tag: "Leitura pratica",
             tone: "blue",
-            items: [
-              "Designa beneficiarios diretamente na conta internacional.",
-              "Evita probate americano e acelera a transferencia operacional.",
-              "Reduz friccao para a familia no pior momento.",
-            ],
+            title: "O que realmente muda",
+            body:
+              "Nao basta escolher entre renda fixa, acoes ou fundos. Importa saber se o ativo distribui dividendos, se tem raiz americana e se a sucessao esta organizada.",
           },
           {
-            title: "O que nao resolve",
-            tone: "red",
-            items: [
-              "Nao elimina o estate tax.",
-              "Nao substitui planejamento patrimonial.",
-              "Nao dispensa revisar o tipo de ativo mantido na conta.",
-            ],
-          },
-          {
-            title: "Regra pratica",
-            tone: "gold",
-            items: [
-              "Conta internacional aberta deveria sair com TOD preenchido.",
-              "E uma medida simples, sem custo relevante e de implementacao imediata.",
-              "Funciona como camada operacional minima da sucessao.",
-            ],
+            tag: "Atencao",
+            tone: "green",
+            title: "Gestao tributaria",
+            body:
+              "Na pratica da pessoa fisica, perdas de aplicacoes financeiras no exterior podem compensar rendimentos financeiros no exterior no mesmo periodo de apuracao, sem segregacao por classe de ativo.",
           },
         ],
+        notes:
+          "Este slide deve soar como leitura pratica do HTML: duas lentes principais e um lembrete de organizacao tributaria. Na narrativa de pessoa fisica, o ponto principal e que a Receita trata essas perdas e rendimentos financeiros no exterior em conjunto no mesmo periodo de apuracao.",
       },
       {
-        type: "process",
-        section: "PIC Offshore",
-        title: "A PIC entra quando a conversa deixa de ser apenas de produto",
-        lead:
-          "A PIC nao e a resposta padrao; ela aparece quando patrimonio, necessidade de governanca e sucessao mais sofisticada justificam a camada societaria adicional.",
+        layout: "table",
+        section: "Aliquotas",
+        title: "A diferenca pratica aparece menos no ganho de capital e mais nos dividendos",
+        headers: ["Classe de ativo", "Ganho de capital", "Dividendos"],
+        rows: [
+          [
+            "Bonds e Treasuries",
+            "15% sobre o ganho. Cupons e ganho de capital entram nessa logica.",
+            "0, porque nao distribuem dividendos.",
+          ],
+          [
+            "Acoes, ETFs e REITs dos EUA",
+            "15% sobre o ganho.",
+            "30% retido na fonte.",
+          ],
+          [
+            "Mutual Funds",
+            "15% sobre o ganho.",
+            "0 para o cotista, com reinvestimento interno.",
+          ],
+        ],
+        footnote:
+          "Duas carteiras com retorno bruto parecido podem gerar resultados liquidos muito diferentes se uma delas distribui dividendos com retencao de 30% e a outra reinveste internamente.",
+        notes:
+          "Explique a regra-base: ganho de capital em reais, aliquota de 15 por cento e pagamento no ajuste anual. O divisor de aguas economico aparece nos dividendos e no veiculo escolhido.",
+      },
+      {
+        layout: "cards",
+        section: "Aliquotas",
+        title: "Exposicao direta e mutual funds nao tem o mesmo atrito tributario",
+        cards: [
+          {
+            tone: "red",
+            title: "Quando a exposicao e direta",
+            body:
+              "Acoes, ETFs e REITs domiciliados nos EUA carregam retencao de 30% na fonte sobre dividendos.",
+          },
+          {
+            tone: "green",
+            title: "Como mutual funds ajudam",
+            body:
+              "O cotista nao recebe dividendos. O fundo reinveste internamente e melhora o compounding no longo prazo.",
+          },
+        ],
+        notes:
+          "Este slide existe para martelar o tema economico do HTML: nao e so uma questao de ativo, mas do envelope em que o investidor acessa a exposicao internacional.",
+      },
+      {
+        layout: "image-full",
+        section: "Estate Tax",
+        title: "Antes do ativo, vale fixar a regra-base do Estate Tax",
+        image: {
+          path: "assets/tributacao/estate-tax.png",
+        },
+        frame: {
+          x: 0.84,
+          y: 2.12,
+          w: 11.68,
+          h: 4.86,
+        },
+        notes:
+          "Use este slide para explicar a regra-base antes de entrar nos ativos sujeitos. O objetivo e deixar claro que o problema nao e simplesmente investir fora, mas manter exposicao relevante a ativos de raiz americana acima da faixa de US$ 60 mil.",
+      },
+      {
+        layout: "cards",
+        section: "Estate Tax",
+        title: "Depois da regra-base, importa saber quais ativos entram no risco",
+        cards: [
+          {
+            tag: "Sujeitos",
+            tone: "red",
+            title: "Entram no estate tax",
+            body:
+              "Acoes americanas, ETFs domiciliados nos EUA e REITs entram na base de calculo para nao residentes.",
+          },
+          {
+            tag: "Nao sujeitos",
+            tone: "green",
+            title: "Ficam fora desse risco",
+            body:
+              "Mutual Funds Irlanda/Luxemburgo, bonds individuais, Treasuries e CDs ajudam a afastar o risco sucessorio.",
+          },
+        ],
+        notes:
+          "A conta nao e o problema. O problema e o ativo com raiz americana acima da faixa relevante. Use o slide para separar risco sucessorio do simples fato de ter conta internacional.",
+      },
+      {
+        layout: "table",
+        section: "Estate Tax",
+        title: "O imposto incide apenas sobre o excedente acima de US$ 60 mil",
+        headers: ["Base tributavel acima de US$ 60 mil", "Aliquota"],
+        rows: [
+          ["Ate US$ 10 mil", "18%"],
+          ["De US$ 10 mil ate US$ 20 mil", "20%"],
+          ["De US$ 20 mil ate US$ 40 mil", "22%"],
+          ["De US$ 40 mil ate US$ 60 mil", "24%"],
+          ["De US$ 60 mil ate US$ 80 mil", "26%"],
+          ["De US$ 80 mil ate US$ 100 mil", "28%"],
+          ["De US$ 100 mil ate US$ 150 mil", "30%"],
+          ["De US$ 150 mil ate US$ 250 mil", "32%"],
+          ["De US$ 250 mil ate US$ 500 mil", "34%"],
+          ["De US$ 500 mil ate US$ 750 mil", "36%"],
+          ["De US$ 750 mil ate US$ 1 milhao", "38%"],
+          ["Acima de US$ 1 milhao", "40%"],
+        ],
+        footnote:
+          "Mensagem-chave: o risco nao desaparece porque a carteira e diversificada. O que reduz o problema e a combinacao entre veiculo correto, TOD preenchido e, em alguns casos, estrutura patrimonial.",
+        notes:
+          "Explique a progressividade e reforce que o Brasil nao possui tratado sucessorio com os Estados Unidos para ampliar a faixa de isencao do investidor brasileiro.",
+      },
+      {
+        layout: "steps",
+        section: "TOD",
+        title: "TOD e a providencia basica para a conta internacional",
         steps: [
           {
-            title: "Quando entra",
-            items: [
-              "Patrimonio offshore relevante.",
-              "Sucessao mais sofisticada ou necessidade real de ativos de raiz americana.",
-            ],
+            number: "1",
+            title: "Designacao em vida",
+            body:
+              "O cliente escolhe antecipadamente quem recebera os ativos mantidos naquela conta internacional.",
           },
           {
-            title: "Como funciona",
-            items: [
-              "A empresa passa a deter os investimentos.",
-              "Na sucessao, o que muda de maos sao as cotas da companhia.",
-            ],
+            number: "2",
+            title: "Transferencia mais direta",
+            body:
+              "A corretora usa essa designacao para encaminhar a transferencia sem exigir o mesmo rito de inventario americano.",
           },
           {
-            title: "Beneficios",
-            items: [
-              "Organizacao patrimonial e de governanca.",
-              "Afastamento do estate tax em casos adequados.",
-            ],
-          },
-          {
-            title: "Custo e limite",
-            items: [
-              "Ha custo de abertura, manutencao e mais complexidade.",
-              "Por isso a PIC nao deve ser tratada como default.",
-            ],
+            number: "3",
+            title: "Menos custo e menos demora",
+            body:
+              "TOD evita um processo judicial mais caro e lento, mas precisa vir junto de revisao da composicao dos ativos.",
           },
         ],
-        summaryTitle: "Leitura correta da estrutura",
-        summaryItems: [
-          "PIC nao serve para ocultar patrimonio. E um veiculo societario para casos patrimoniais especificos em que a camada adicional faz sentido economico e sucessorio.",
-        ],
+        notes:
+          "Diferencie bem o que TOD resolve e o que ele nao resolve. Ele evita probate e acelera a transferencia, mas nao elimina estate tax se a carteira continuar com raiz americana.",
       },
       {
-        type: "cards",
-        section: "Resumo",
-        title: "A recomendacao e escalar complexidade so quando houver motivo patrimonial",
-        lead:
-          "A logica final e simples: comecar por instrumentos eficientes, preencher TOD, mapear a raiz americana e so depois discutir estruturas mais pesadas, se o patrimonio realmente pedir.",
+        layout: "cards",
+        section: "PIC Offshore",
+        title: "PIC offshore entra quando a conversa deixa de ser apenas de produto",
         cards: [
           {
-            title: "Carteira simples",
-            tone: "green",
-            items: [
-              "Mutual funds e renda fixa internacional costumam resolver muito bem o comeco.",
-              "O foco e preservar compounding, eficiencia tributaria e simplicidade operacional.",
-            ],
-          },
-          {
-            title: "Risco sucessorio",
-            tone: "red",
-            items: [
-              "TOD preenchido e leitura clara da raiz americana evitam surpresa futura.",
-              "A familia nao deveria descobrir o problema apenas no evento sucessorio.",
-            ],
-          },
-          {
-            title: "Escalada de complexidade",
+            tag: "Funcao patrimonial",
             tone: "gold",
-            items: [
-              "Se o patrimonio cresce, a conversa evolui para PIC e governanca.",
-              "Estrutura deve acompanhar necessidade real, nao modismo.",
-            ],
+            title: "Como a PIC ajuda",
+            body:
+              "A empresa concentra investimentos no exterior, organiza governanca e faz a sucessao ocorrer nas cotas da companhia.",
+          },
+          {
+            tag: "Quando faz sentido",
+            tone: "blue",
+            title: "Quando entra na conversa",
+            body:
+              "Quando o patrimonio comporta custos, ha necessidade de ativos de raiz americana ou a sucessao pede estrutura mais sofisticada.",
           },
         ],
+        notes:
+          "Reforce que PIC nao e resposta padrao. Ela e uma camada societaria para casos patrimoniais especificos, e nao um ponto de partida universal.",
+      },
+      {
+        layout: "metrics",
+        section: "PIC Offshore",
+        title: "Custos tipicos da estrutura offshore",
+        metrics: [
+          { value: "US$ 3k a 5k", label: "Constituicao" },
+          { value: "US$ 2k a 4k", label: "Manutencao anual" },
+          { value: "US$ 1,2k a 5k", label: "Contabilidade" },
+          { value: "US$ 3,2k a 10k", label: "Custo anual total" },
+        ],
+        notes:
+          "Mostre que a estrutura compra governanca e protecao sucessoria, mas adiciona custo recorrente. Isso ajuda a enquadrar por que o tema aparece em patrimonios maiores.",
+      },
+      {
+        layout: "decision",
+        section: "PIC Offshore",
+        title: "Fluxo de decisao: quando a PIC faz sentido?",
+        question: "O patrimonio offshore e superior a US$ 500.000?",
+        topLeft: {
+          tag: "Nao",
+          title: "PIC nao recomendada",
+          body:
+            "Em geral, os custos nao se justificam nesse momento. Mutual Funds, bonds e outros veiculos mais simples tendem a resolver melhor.",
+          tone: "warm",
+        },
+        topRight: {
+          tag: "Sim",
+          title: "O patrimonio comporta os custos",
+          body:
+            "Com a barreira economica superada, a decisao passa a depender de necessidade patrimonial real, nao apenas financeira.",
+          tone: "surface",
+        },
+        middleLabel:
+          "Avalie as duas perguntas abaixo de forma independente",
+        middleLeft: {
+          title: "Precisa manter ativos de raiz americana?",
+          body: "Exemplo: ETFs dos EUA, acoes americanas ou REITs dentro da estrategia da familia.",
+        },
+        middleRight: {
+          title: "A sucessao e complexa?",
+          body: "Exemplo: multiplos herdeiros, menores de idade, patrimonio relevante ou necessidade de governanca mais sofisticada.",
+        },
+        bottomLeft: {
+          tag: "Nao para ambas",
+          title: "PIC dispensavel",
+          body:
+            "Mutual Funds, bonds e TOD costumam resolver a necessidade com menos custo e menos complexidade.",
+          tone: "warm",
+        },
+        bottomRight: {
+          tag: "Sim para qualquer uma",
+          title: "PIC recomendada para analise",
+          body:
+            "Nesse cenario, a estrutura pode afastar o estate tax e organizar a sucessao de forma corporativa, se o custo fizer sentido.",
+          tone: "green",
+        },
+        notes:
+          "O fluxo deve reproduzir o HTML: primeiro a barreira de tamanho patrimonial, depois duas perguntas independentes sobre necessidade real. A mensagem final e que PIC so entra quando custo e caso justificam.",
+      },
+      {
+        layout: "table",
+        section: "Resumo",
+        title: "Resumo consolidado",
+        headers: ["Tema", "Ponto principal", "Leitura pratica"],
+        rows: [
+          [
+            "Ganho de capital",
+            "Apuracao em reais com aliquota-base de 15% sobre saldo liquido.",
+            "O imposto so aparece se houver venda com lucro ao longo do ano.",
+          ],
+          [
+            "Dividendos",
+            "Acoes, ETFs e REITs dos EUA sofrem retencao de 30%; Mutual Funds reinvestem internamente.",
+            "O veiculo escolhido muda bastante a eficiencia tributaria no longo prazo.",
+          ],
+          [
+            "Ativos de raiz americana",
+            "Entram no escopo do estate tax acima de US$ 60 mil.",
+            "Retorno e liquidez nao bastam: e preciso olhar o risco sucessorio.",
+          ],
+          [
+            "TOD",
+            "Evita o inventario americano, mas nao elimina o estate tax.",
+            "Deveria ser providencia basica para quem ja tem conta internacional.",
+          ],
+          [
+            "PIC",
+            "Pode ser transparente ou opaca e funciona como estrutura patrimonial.",
+            "Faz sentido em patrimonio maior, ativos americanos e/ou sucessao complexa.",
+          ],
+        ],
+        footnote:
+          "Em uma frase: investir fora nao e so comprar ativos globais. E escolher a forma mais eficiente de acessar o exterior, proteger patrimonio e simplificar a sucessao.",
+        notes:
+          "Feche com a sequencia pratica do HTML: escolher o veiculo, organizar a sucessao basica e escalar complexidade apenas quando houver motivo patrimonial.",
       },
     ],
   },
@@ -677,316 +780,161 @@ module.exports = [
     shortName: "Guia HUB",
     theme: {
       bg: "FAF7F2",
-      warm: "F5ECDF",
       dark: "132235",
       navy: "1C3046",
       gold: "C4963C",
       goldLight: "E3BE74",
+      warm: "F5ECDF",
+      surface: "FFFDFC",
       text: "293949",
       muted: "677789",
       border: "DDD1BF",
-      blue: "2E6F9D",
-      red: "B75449",
-      green: "31875A",
+    },
+    fonts: {
+      title: "DM Serif Display",
+      body: "Source Sans 3",
     },
     cover: {
-      eyebrow: "Alta Vista Investimentos | Guia Pratico para Assessor",
+      eyebrow: "Alta Vista Investimentos | Guia pratico para assessor",
       title: "Guia HUB Investimentos Internacionais",
       subtitle:
-        "Apresentacao em PowerPoint para transformar a navegacao do HUB, o fluxo de cambio e o uso da conta global em um roteiro visual e editavel.",
-      chips: [
-        "Navegacao do HUB",
-        "Cambio D0",
-        "Conta global e TOD",
-      ],
-      panelTitle: "Frentes cobertas",
-      panelItems: [
-        "Entrada no ambiente internacional e leitura da regua de navegacao.",
-        "Tela do cliente, conta global, W8, suitability e TOD.",
-        "Passo a passo do TOD no aplicativo.",
-        "Boleta de cambio, prateleira de produtos e central de operacoes.",
-      ],
+        "Um deck operacional e visual para navegar no HUB, orientar TOD, executar cambio e acompanhar produtos.",
+      chips: ["Navegacao", "Cambio D0", "Conta Global e TOD"],
+      notes:
+        "Introducao do fluxo. O assessor passa por quatro frentes: entrar no ambiente certo, ler a situacao do cliente, executar funding em cambio e transformar a conta abastecida em alocacao e acompanhamento.",
     },
     slides: [
       {
-        type: "process",
+        layout: "statement",
         section: "Jornada",
-        title: "A operacao no HUB funciona melhor quando o assessor pensa em quatro frentes conectadas",
-        lead:
-          "A jornada internacional do assessor pode ser organizada como um fluxo continuo: entrar no ambiente certo, ler a situacao do cliente, transformar saldo local em funding internacional e acompanhar a alocacao ate a conclusao.",
-        steps: [
-          {
-            title: "Entrada no ambiente",
-            items: [
-              "Menu lateral e regua superior direcionam o assessor.",
-              "O objetivo e chegar rapido a frente correta.",
-            ],
-          },
-          {
-            title: "Leitura do cliente",
-            items: [
-              "Conta global, push de abertura, W8, suitability e TOD.",
-              "A tela concentra o contexto antes da proxima acao.",
-            ],
-          },
-          {
-            title: "Cambio e funding",
-            items: [
-              "Boleta D0, origem dos recursos, spread e valor a receber.",
-              "E o elo entre saldo local e conta global.",
-            ],
-          },
-          {
-            title: "Produtos e monitoramento",
-            items: [
-              "Prateleira internacional, push ao cliente e central de operacoes.",
-              "Acompanhamento fecha o ciclo operacional.",
-            ],
-          },
-        ],
-        summaryTitle: "Mensagem do guia",
-        summaryItems: [
-          "O ganho operacional vem de encadear essas etapas sem perder contexto da conta e da posicao do cliente.",
-        ],
+        title: "Pense o HUB como uma jornada conectada",
+        kicker: "Entrada, leitura do cliente, funding internacional e distribuicao de produtos.",
+        notes:
+          "Abra o guia com a logica da jornada. Isso reduz retrabalho e ajuda o assessor a nao navegar sem contexto.",
       },
       {
-        type: "gallery",
+        layout: "image-pair",
         section: "Navegacao",
-        title: "Navegacao no HUB: reconhecer os dois niveis economiza tempo",
-        lead:
-          "A orientacao inicial do assessor depende de duas leituras simultaneas: o caminho lateral para entrar no modulo correto e a regua superior para mudar de assunto sem perder o cliente de vista.",
-        cards: [
-          {
-            title: "Menu lateral",
-            tone: "gold",
-            items: [
-              "Caminho operacional: Investimento > Internacional > Investimento Global.",
-              "Essa e a porta de entrada para abertura, cambio e produtos.",
-            ],
-          },
-          {
-            title: "Regua superior",
-            tone: "blue",
-            items: [
-              "Organiza dashboard, produtos, clientes, cambio, operacoes e apoio.",
-              "Reconhecer os dois niveis acelera a jornada do assessor.",
-            ],
-          },
-        ],
+        title: "Menu lateral e regua superior trabalham juntos",
         images: [
           {
             path: "assets/hub/Hub1.png",
-            caption:
-              "Entrada pela lateral do HUB ate a trilha de Investimento Global.",
+            caption: "Entrada em Investimento Global",
           },
           {
             path: "assets/hub/HUB2.png",
-            caption:
-              "Regua superior com os modulos do ambiente internacional.",
+            caption: "Regua superior",
           },
         ],
+        notes:
+          "Explique que o menu lateral e porta de entrada. A regua superior organiza a execucao depois que o assessor ja esta dentro da frente internacional.",
       },
       {
-        type: "gallery",
+        layout: "image-pair",
         section: "Cliente",
-        title: "A tela do cliente concentra o contexto que destrava a proxima acao",
-        lead:
-          "Na operacao, a consulta do cliente e o centro de gravidade: e ali que o assessor identifica se a conta existe, se o onboarding terminou e qual e a situacao patrimonial antes de falar de cambio ou produto.",
-        cards: [
-          {
-            title: "Caso 1: sem conta global",
-            tone: "red",
-            items: [
-              "Enviar push de abertura pelo HUB ou orientar abertura pelo app.",
-              "Acompanhar o progresso ate a conta ficar disponivel.",
-            ],
-          },
-          {
-            title: "Caso 2: conta ativa",
-            tone: "blue",
-            items: [
-              "Ler status da conta, dados cadastrais, W8, suitability e TOD.",
-              "Conferir a conta XP International antes de avancar.",
-            ],
-          },
-          {
-            title: "Leitura operacional",
-            tone: "gold",
-            items: [
-              "A tela mostra saldos e posicoes local e offshore.",
-              "Ela reduz retrabalho e evita navegar sem contexto do cliente.",
-            ],
-          },
-        ],
+        title: "A tela do cliente concentra o contexto antes da proxima acao",
         images: [
           {
             path: "assets/hub/abertura de conta.png",
-            caption:
-              "Fluxo de abertura da conta internacional e envio de push.",
+            caption: "Push de abertura",
           },
           {
             path: "assets/hub/cliente dados.png",
-            caption:
-              "Painel com status da conta, TOD e demais dados de apoio.",
-          },
-          {
-            path: "assets/hub/HUB carteira.png",
-            caption:
-              "Visao consolidada das carteiras local e offshore.",
+            caption: "Status da conta e dados",
           },
         ],
+        notes:
+          "Mostre os dois cenarios: cliente ainda sem conta global e cliente com conta ja ativa. O ponto e que a tela ajuda a decidir se o assessor precisa abrir conta, revisar dados ou avancar para cambio.",
       },
       {
-        type: "gallery",
+        layout: "image-full",
+        section: "Cliente",
+        title: "Carteira consolidada ajuda a avaliar o ponto de partida",
+        image: {
+          path: "assets/hub/HUB carteira.png",
+        },
+        notes:
+          "Use este slide para reforcar a leitura de saldos e posicoes local e offshore. E uma tela de contexto antes de funding e produto.",
+      },
+      {
+        layout: "image-triptych",
         section: "TOD no App",
-        title: "TOD pelo aplicativo: a orientacao do assessor vira roteiro simples para o cliente",
-        lead:
-          "O cadastro de beneficiarios pode ser apresentado como um passo a passo objetivo. Depois de validar a conta global no HUB, o cliente pode concluir essa frente pelo proprio app da XP.",
-        cards: [
-          {
-            title: "Passo a passo do cliente",
-            tone: "green",
-            items: [
-              "Entrar pela Conta Global no app.",
-              "Ir ate Sucessao Patrimonial.",
-              "Cadastrar o beneficiario no TOD.",
-            ],
-          },
-          {
-            title: "Papel do assessor",
-            tone: "gold",
-            items: [
-              "Validar no HUB que a conta existe e esta apta.",
-              "Orientar a jornada pelo app quando isso fizer mais sentido que o push.",
-              "Usar o mesmo caminho quando a conta ainda estiver em abertura.",
-            ],
-          },
-        ],
+        title: "TOD pelo aplicativo em tres telas",
         images: [
           {
             path: "assets/hub/conta internacional HUB.png",
-            caption:
-              "Entrada da Conta Global pelo simbolo do globo no app.",
+            caption: "Conta Global",
           },
           {
             path: "assets/hub/Caminho tod.png",
-            caption:
-              "Acesso ao menu de Sucessao Patrimonial na Conta Global.",
+            caption: "Sucessao Patrimonial",
           },
           {
             path: "assets/hub/Cadastrar TOD.png",
-            caption:
-              "Tela de cadastro do beneficiario para concluir o TOD.",
+            caption: "Cadastrar beneficiario",
           },
         ],
+        notes:
+          "Oriente a sequencia: entrar na Conta Global pelo globo, descer ate Sucessao Patrimonial e concluir o cadastro de beneficiario. Trate TOD como parte natural da ativacao da conta.",
       },
       {
-        type: "gallery",
+        layout: "image-pair",
         section: "Cambio",
-        title: "Fluxo de cambio: da consulta ao clique em Fazer Cambio",
-        lead:
-          "O cambio e a ponte entre o saldo em reais e o funding da conta internacional. O processo e simples, mas depende de conferencia operacional disciplinada antes do envio.",
-        cards: [
-          {
-            title: "Checklist antes do envio",
-            tone: "blue",
-            items: [
-              "Abrir a aba de cambio e localizar o cliente correto.",
-              "Conferir conta origem, saldo disponivel, valor, spread e total estimado.",
-              "Confirmar origem dos recursos e limites antes da confirmacao.",
-            ],
-          },
-          {
-            title: "Leitura da boleta",
-            tone: "gold",
-            items: [
-              "O botao Fazer Cambio leva para a boleta operacional.",
-              "A liquidacao e em D0.",
-              "A clareza da boleta reduz erro e retrabalho.",
-            ],
-          },
-        ],
+        title: "Da navegacao ao clique em Fazer Cambio",
         images: [
           {
             path: "assets/hub/caminho para cambio.png",
-            caption:
-              "Entrada pela aba de Cambio no menu superior do HUB.",
+            caption: "Entrada em cambio",
           },
           {
             path: "assets/hub/cambio.png",
-            caption:
-              "Tela do cliente em cambio e acesso ao botao Fazer Cambio.",
-          },
-          {
-            path: "assets/hub/boleta cambio.png",
-            caption:
-              "Boleta com conta origem, valor, spread e confirmacao do envio.",
+            caption: "Tela do cliente",
           },
         ],
+        notes:
+          "Mostre a sequencia operacional: entrar em cambio, localizar o cliente, confirmar saldo e somente depois clicar em Fazer Cambio.",
       },
       {
-        type: "gallery",
+        layout: "image-full",
+        section: "Cambio",
+        title: "A boleta e a conferencia final antes do envio",
+        image: {
+          path: "assets/hub/boleta cambio.png",
+        },
+        frame: {
+          x: 4.02,
+          y: 2.18,
+          w: 5.32,
+          h: 4.72,
+        },
+        notes:
+          "Fale do checklist: conta de origem, valor em reais, spread, impostos, comissao e total estimado a receber. Como a liquidacao e D0, essa revisao precisa ser disciplinada.",
+      },
+      {
+        layout: "image-full",
         section: "Produtos",
-        title: "Depois do funding, o HUB vira ponto de distribuicao da carteira internacional",
-        lead:
-          "A prateleira de produtos mostra que o processo nao termina no cambio. O assessor precisa converter a conta abastecida em uma proposta concreta de alocacao e envio ao cliente.",
-        cards: [
-          {
-            title: "O que o assessor encontra",
-            tone: "blue",
-            items: [
-              "Fundos, equity, bonds, tesouro, CDs e notas estruturadas.",
-              "A prateleira organiza a distribuicao das solucoes internacionais.",
-            ],
-          },
-          {
-            title: "Objetivo da etapa",
-            tone: "gold",
-            items: [
-              "Transformar o dinheiro convertido em carteira efetivamente alocada.",
-              "Sair com o produto mapeado e com o push preparado para o cliente.",
-            ],
-          },
-        ],
-        images: [
-          {
-            path: "assets/hub/produtos.png",
-            caption:
-              "Prateleira internacional de produtos com destaque para fundos e demais classes globais.",
-          },
-        ],
+        title: "Depois do funding, a prateleira vira ponto de distribuicao",
+        image: {
+          path: "assets/hub/produtos.png",
+        },
+        notes:
+          "Mostre que a jornada nao termina no cambio. A conta precisa virar proposta de alocacao com fundos, equities, bonds, tesouro, CDs ou notas estruturadas.",
       },
       {
-        type: "gallery",
+        layout: "image-full",
         section: "Acompanhamento",
-        title: "A Central de Operacoes fecha o ciclo com monitoramento de cambio e pushs",
-        lead:
-          "A visibilidade pos-operacao e parte da propria experiencia do assessor. O controle do status evita perder timing e reduz a necessidade de consultas dispersas.",
-        cards: [
-          {
-            title: "Depois da execucao",
-            tone: "green",
-            items: [
-              "Depositos e Saques monitora as movimentacoes ligadas ao cambio.",
-              "Ativos Internacionais monitora os pushs enviados ao cliente.",
-            ],
-          },
-          {
-            title: "O que acompanhar",
-            tone: "gold",
-            items: [
-              "Processando, pendente de cliente ou ja aceito.",
-              "Leitura rapida para agir sem perder timing operacional.",
-            ],
-          },
-        ],
-        images: [
-          {
-            path: "assets/hub/Acompanhamentos.png",
-            caption:
-              "Central de Operacoes usada para acompanhar cambio e pushs internacionais.",
-          },
-        ],
+        title: "A Central de Operacoes fecha o ciclo",
+        image: {
+          path: "assets/hub/Acompanhamentos.png",
+        },
+        frame: {
+          x: 2.44,
+          y: 2.18,
+          w: 6.52,
+          h: 4.72,
+        },
+        notes:
+          "Fechamento operacional. Use a tela para acompanhar depositos e saques ligados ao cambio e os pushs de ativos internacionais enviados ao cliente.",
       },
     ],
   },
