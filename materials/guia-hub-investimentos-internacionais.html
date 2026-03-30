@@ -193,6 +193,35 @@
     }
 
     .toc-links a:hover { color: var(--brand-accent); border-color: var(--brand-accent); }
+    .toc-download {
+      flex-shrink: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(196, 150, 60, 0.3);
+      background: var(--brand-dark);
+      color: #fff;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+      white-space: nowrap;
+      box-shadow: var(--shadow-card);
+      transition: all 0.2s;
+    }
+
+    .toc-download:hover {
+      background: var(--brand-accent);
+      color: var(--brand-dark);
+      border-color: var(--brand-accent);
+    }
+
+    @media (max-width: 920px) {
+      .toc-inner { flex-wrap: wrap; }
+      .toc-download { width: 100%; }
+    }
 
     section { padding: 72px 0; }
     section + section { border-top: 1px solid rgba(221, 209, 191, 0.72); }
@@ -438,6 +467,7 @@
         <a href="#produtos">Prateleira de produtos</a>
         <a href="#acompanhamento">Acompanhamento</a>
       </div>
+      <a class="toc-download" href="./presentations/guia-hub-investimentos-internacionais-apresentacao.pptx" download>Baixar PPTX</a>
     </div>
   </nav>
 

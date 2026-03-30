@@ -228,6 +228,36 @@
       border-color: var(--brand-accent);
     }
 
+    .toc-download {
+      flex-shrink: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(196, 150, 60, 0.3);
+      background: var(--brand-dark);
+      color: #fff;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+      white-space: nowrap;
+      box-shadow: var(--shadow-card);
+      transition: all 0.2s;
+    }
+
+    .toc-download:hover {
+      background: var(--brand-accent);
+      color: var(--brand-dark);
+      border-color: var(--brand-accent);
+    }
+
+    @media (max-width: 920px) {
+      .toc-inner { flex-wrap: wrap; }
+      .toc-download { width: 100%; }
+    }
+
     section { padding: 72px 0; }
     section + section { border-top: 1px solid rgba(221, 209, 191, 0.72); }
 
@@ -387,6 +417,21 @@
     .table-wrap {
       margin: 32px 0 40px;
       overflow: hidden;
+    }
+
+    .asset-panel {
+      margin: 32px 0 36px;
+      padding: 18px;
+      background: var(--brand-surface);
+      border: 1px solid rgba(221, 209, 191, 0.95);
+      border-radius: 22px;
+      box-shadow: var(--shadow-card);
+    }
+
+    .asset-panel img {
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
     }
 
     table {
@@ -669,6 +714,7 @@
         <a href="#pic">PIC</a>
         <a href="#resumo">Resumo</a>
       </div>
+      <a class="toc-download" href="./presentations/tributacao-investimentos-internacionais-apresentacao.pptx" download>Baixar PPTX</a>
     </div>
   </nav>
 
@@ -714,7 +760,7 @@
       </div>
 
       <div class="callout blue">
-        <p><strong>Ponto de atenção:</strong> prejuízos realizados podem ser compensados com ganhos futuros da mesma natureza, o que torna a organização das vendas um tema relevante para quem investe offshore por horizonte longo.</p>
+      <p><strong>Ponto de atenção:</strong> na prática da pessoa física, perdas de aplicações financeiras no exterior podem compensar rendimentos financeiros no exterior no mesmo período de apuração, sem segregação por classe de ativo.</p>
       </div>
     </div>
   </section>
@@ -723,9 +769,9 @@
     <div class="container">
       <div class="section-number">02</div>
       <h2>Alíquotas: a diferença entre ganho de capital e dividendos</h2>
-      <p class="section-lead">Diferentemente do Brasil, em que as regras costumam variar mais conforme o produto, a leitura aqui é mais direta: as diferentes classes de ativos seguem a mesma alíquota-base de 15% no ganho de capital, com possibilidade de compensar prejuízos, e a principal diferença aparece nos dividendos.</p>
+      <p class="section-lead">Diferentemente do Brasil, em que as regras costumam variar mais conforme o produto, a leitura aqui é mais direta: as diferentes classes de ativos seguem a mesma alíquota-base de 15% no ganho de capital, e a principal diferença econômica aparece nos dividendos e na forma como as perdas podem ser compensadas dentro da ficha de rendimentos no exterior.</p>
 
-      <p>O ganho de capital em investimentos internacionais é apurado em reais e tributado à <strong>alíquota de 15%</strong> sobre o saldo líquido de ganhos menos prejuízos, com possibilidade de compensação. Esse imposto só existe se o cliente <strong>vendeu algum ativo com lucro ao longo do ano</strong>, e o pagamento é feito apenas na <strong>declaração de ajuste anual do imposto de renda</strong>. A exceção prática mais importante está nos <strong>dividendos</strong>: em ações, ETFs e REITs americanos, há <strong>retenção de 30% na fonte</strong>.</p>
+    <p>O ganho de capital em investimentos internacionais é apurado em reais e tributado à <strong>alíquota de 15%</strong> sobre o saldo líquido. Na prática da pessoa física, as <strong>perdas de aplicações financeiras no exterior</strong> podem ser compensadas com <strong>rendimentos financeiros no exterior no mesmo período de apuração</strong>, sem segregação por classe de ativo. A exceção prática mais importante continua nos <strong>dividendos</strong>: em ações, ETFs e REITs americanos, há <strong>retenção de 30% na fonte</strong>.</p>
 
       <div class="table-wrap">
         <table>
@@ -780,6 +826,10 @@
       <p class="section-lead">O estate tax é o imposto de herança americano aplicável a ativos de raiz americana detidos por não residentes nos Estados Unidos. Por isso, entender quais ativos entram nessa classificação é o primeiro passo para medir o risco sucessório da carteira.</p>
 
       <p>Para não residentes nos EUA, ativos de raiz americana entram no escopo do <strong>estate tax acima de US$ 60 mil</strong>. O imposto incide apenas sobre o valor que <strong>exceder os US$ 60 mil</strong>, com tributação progressiva que pode chegar a <strong>40%</strong> sobre essa base tributável. Como o Brasil não possui tratado de imposto sobre herança com os Estados Unidos, não há ampliação dessa faixa de isenção para o investidor brasileiro.</p>
+
+      <div class="asset-panel">
+        <img src="../assets/tributacao/estate-tax.png" alt="Ilustração sobre Estate Tax, isenção de US$ 60 mil e ativos que ficam fora do imposto de herança americano">
+      </div>
 
       <div class="tax-grid">
         <article class="tax-card warning">

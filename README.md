@@ -4,17 +4,22 @@ Repositorio dos materiais HTML estaticos da Alta Vista sobre investimentos inter
 
 ## Estrutura
 
-- `materials/`: HTMLs principais publicados.
+- `materials/`: HTMLs finais publicados.
+- `materials/presentations/`: PPTX finais usados pelos botoes de download.
 - `assets/logos/`: logos usados pelos materiais.
 - `assets/hub/`: capturas e imagens do guia operacional.
+- `assets/tributacao/`: assets especificos do material de tributacao.
+- `assets/diversificacao/`: assets especificos do material de diversificacao.
 - `docs/`: contexto operacional do projeto.
-- arquivos HTML na raiz: redirects publicos para manter URLs estaveis.
+- `tools/presentations/`: fonte do gerador de PPTX.
+- `tools/presentations/output/`: artefatos temporarios de renderizacao, ignorados no Git.
+- raiz do projeto: apenas `index.html` e os redirects publicos canonicos para os tres HTMLs em `materials/`.
 
 ## Publicacao
 
 - GitHub Pages e Vercel servem os arquivos estaticos da raiz.
-- Os atalhos da raiz redirecionam para os HTMLs reais em `materials/`.
-- Ao reorganizar arquivos, preserve os redirects para nao quebrar links publicos.
+- Os atalhos canonicos da raiz redirecionam para os HTMLs reais em `materials/`.
+- Evite criar aliases duplicados de redirect na raiz; use apenas os slugs canonicos.
 
 ## Fluxo de trabalho
 

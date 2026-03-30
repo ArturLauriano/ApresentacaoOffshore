@@ -1,0 +1,4 @@
+node_modules/
+tools/presentations/output/
+.claude/
+.codex/
