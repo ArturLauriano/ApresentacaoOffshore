@@ -1,0 +1,44 @@
+Fechamento global de março de 2026
+Visão geral
+
+Março fechou como um mês de reprecificação global de risco, dominado por um choque de oferta em energia e por uma mudança relevante na narrativa macro. Mas, para ler março corretamente, é preciso voltar ao evento que definiu o regime de mercado do mês: os ataques diretos iniciados em 28 de fevereiro de 2026, quando EUA e Israel passaram a atuar diretamente contra o Irã. Embora o evento tenha ocorrido no último dia de fevereiro, ele foi a condição inicial de praticamente toda a dinâmica observada em março: disparada do petróleo, reprecificação da curva global de juros, piora do sentimento com risco e compressão de múltiplos em bolsa.
+
+A partir daí, o mercado saiu de um pano de fundo em que ainda havia espaço para discutir desinflação e cortes graduais de juros para um ambiente mais desconfortável, de pressão inflacionária via commodities, alta de yields e compressão de múltiplos em bolsa. Em termos de regime, o mês teve características típicas de stagflation scare: petróleo forte, curva abrindo, crédito piorando nas margens e ativos de risco perdendo sustentação.
+
+O ponto central do mês foi a energia. O Brent acumulou em março sua maior alta mensal já registrada, em torno de 64%, enquanto o WTI avançou cerca de 52%, em um movimento associado às disrupções de oferta no Oriente Médio e à forte queda da produção da OPEP, que recuou 7,3 milhões de barris por dia para o menor nível desde meados de 2020. Isso contaminou a leitura de inflação global, elevou prêmios de risco nas curvas soberanas e piorou o pano de fundo para ativos sensíveis a crescimento e juros.
+
+Renda fixa global e curva de juros
+
+Na renda fixa, março foi claramente um mês ruim. Os títulos soberanos globais caminharam para uma das piores performances mensais dos últimos anos, com destaque para a abertura da curva americana. O Treasury de 10 anos subiu quase 40 bps ao longo do mês e chegou a tocar níveis próximos de 4,50%, enquanto o fechamento mensal ficou ao redor de 4,33%. O Treasury de 2 anos também teve uma abertura expressiva, mostrando que o mercado não reprecificou apenas prêmio longo, mas também a trajetória esperada de política monetária.
+
+O significado desse movimento é importante. Março não foi apenas um mês de bear steepening clássico; houve também reavaliação da própria função de reação do Fed. As corretoras consultadas pela Reuters ainda, em média, mantinham expectativa de dois cortes em 2026, enquanto o Fed havia sinalizado um. Mesmo assim, o mercado de juros foi ficando cada vez menos confortável com a ideia de afrouxamento, porque o choque do petróleo tornava mais difícil imaginar um banco central rapidamente dovish diante de uma inflação de energia reacelerando.
+
+Na Europa, o movimento foi ainda mais sensível à energia. A inflação da zona do euro acelerou para 2,5% em março, saindo de 1,9%, em grande parte por conta do choque do petróleo e seus efeitos indiretos. Ao mesmo tempo, os PMIs apontaram expansão, mas com forte pressão de custos e gargalos logísticos, o que deu ao mercado a sensação de crescimento menos saudável. Isso levou a uma reprecificação do ECB, com o mercado passando a embutir um viés mais duro para a política monetária. No Reino Unido, o choque foi ainda mais violento no trecho curto da curva, com o gilt de 2 anos subindo cerca de 94 bps no mês.
+
+Crédito global e spreads
+
+No crédito listado, março teve deterioração, mas ainda sem configuração de disfunção plena. Na Europa, o iTraxx Crossover foi para perto de 270 bps no começo do mês e o iTraxx Main para cerca de 57 bps, refletindo aumento claro no custo de proteção contra default. Nos EUA, os índices ICE/BofA apontavam o crédito corporativo investment grade perto de 121 bps e o high yield em torno de 308 bps no fim de março, depois de momentos de estresse mais forte ao longo do mês. A mensagem principal é que houve piora, mas o mercado público continuou funcional.
+
+Onde março realmente acendeu alerta foi no private credit. A Reuters mostrou pressão de liquidez e restrições de resgate em veículos relevantes do segmento, com pedidos expressivos em fundos ligados a HPS/BlackRock, Apollo, Morgan Stanley e Ares/Oaktree. Além disso, o estresse já vinha contaminando a disposição dos bancos em financiar o ecossistema, com remarcações de exposição e postura mais cautelosa no crédito. A leitura mais importante aqui é que, em março, o ponto mais frágil do crédito global apareceu menos no spread público de IG/HY e mais na combinação de liquidez, marcação e confiança em estruturas semi-líquidas de private credit.
+
+Bolsas globais
+
+Nas bolsas, março foi um mês de compressão de valuation. Nos EUA, o S&P 500 caminhou para sua pior queda trimestral desde 2022, com perda próxima de 7% no primeiro trimestre, enquanto a Nasdaq sofreu ainda mais, refletindo o efeito combinado de yields mais altos, redução da esperança de cortes e aumento da aversão a risco. As chamadas mega caps de tecnologia também tiveram um trimestre fraco, reforçando a ideia de que o movimento não foi apenas setorial, mas uma reprecificação mais ampla de duration equity.
+
+Na Europa, o desempenho foi ainda mais fraco em março. O STOXX 600 caiu 8% no mês, registrando sua pior performance mensal desde junho de 2022, enquanto o mercado britânico também teve seu pior mês desde 2020. O setor de energia foi praticamente a exceção positiva, subindo cerca de 14,6% em março, o que confirma a característica do mês: um choque exógeno em commodities que drenou valuation de quase todo o resto.
+
+Na Ásia, houve dispersão grande. O Japão foi pressionado pela combinação de petróleo alto, iene fraco e desconforto crescente com a postura do BOJ. Já a Coreia do Sul teve uma das piores performances da região, com o KOSPI caindo quase 19% em março, sua pior queda mensal desde 2008, refletindo saída estrangeira e correção do complexo tecnológico. A China, por outro lado, mostrou resiliência relativa, apoiada por postura monetária mais acomodatícia e menor sensibilidade imediata à mesma combinação de fatores que penalizou outros mercados asiáticos.
+
+Commodities e câmbio
+
+As commodities foram o centro da narrativa. O petróleo foi o ativo dominante do mês, não apenas pelo tamanho da alta, mas porque foi ele que fez a ponte entre geopolítica, inflação e juros. A pesquisa da Reuters com analistas mostrou revisão abrupta das projeções para 2026, com a média esperada para o Brent saltando para US$ 82,85, contra US$ 63,85 antes. Mais do que o preço spot, o mercado passou a incorporar a possibilidade de uma restrição de oferta mais persistente, o que ajudou a explicar a reabertura das curvas e a perda de desempenho das bolsas.
+
+O ouro teve um comportamento menos intuitivo. Mesmo com o aumento da incerteza geopolítica, o metal caiu cerca de 11,8% em março, em sua pior performance mensal desde 2008, porque o avanço dos juros reais e a retirada de cortes do radar pesaram mais do que a demanda clássica por proteção. Isso é relevante porque mostra que março foi um mês em que a dominância macro veio mais da curva de juros e da inflação implícita do que do flight to quality tradicional.
+
+No câmbio, o dólar até teve momentos de fortalecimento, mas o vetor dominante do mês não foi exatamente uma corrida clássica para caixa em dólar, e sim o choque do petróleo e sua transmissão para inflação, bancos centrais e prêmio de risco. A leitura predominante ao longo de março foi a de que o verdadeiro ativo de liderança não era o dólar em si, mas sim a energia e o impacto dela sobre toda a estrutura macro. Essa é uma inferência a partir do comportamento conjunto de petróleo, yields, ouro e bolsas ao longo do mês.
+
+Leitura final de março
+
+O fechamento de março deixa uma mensagem clara: o mercado global terminou o mês em um regime muito menos confortável do que começou. A principal mudança não foi apenas a piora de preço dos ativos, mas a alteração da narrativa. Até então, ainda era plausível trabalhar com uma tese de desaceleração manejável e flexibilização monetária gradual. Depois de março, a combinação de energia mais cara, inflação reacelerando e curva abrindo tornou esse cenário muito menos trivial.
+
+Para alocação, março favoreceu qualidade, liquidez e carrego mais curto/intermediário, ao mesmo tempo em que enfraqueceu a tese de beta indiscriminado em bolsa, high yield e duration longa direcional. Em crédito, o problema do mês apareceu mais em liquidez e estruturas privadas do que em uma explosão generalizada de spreads públicos. Em bolsa, a alta de energia e de juros foi o principal vetor de compressão. Em macro, março terminou com o mercado mais sensível a qualquer combinação entre inflação de oferta e desaceleração de atividade.
