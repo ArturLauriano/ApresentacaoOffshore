@@ -3,6 +3,7 @@
 ## Estado de producao
 
 - A branch `main` publica os materiais estaveis.
+- A branch `feature/market-monthly-outlook-html` concentra o trabalho do material `outlook-mercados-marco-2026`.
 - Os links historicos da raiz continuam ativos por meio de redirects.
 
 ## Layout atual
@@ -13,9 +14,10 @@
 - `assets/hub/` concentra os prints do guia operacional.
 - `assets/tributacao/` concentra os assets do material tributario.
 - `assets/diversificacao/` concentra os assets do material de diversificacao.
+- `docs/HTML_GUIDELINES.md` consolida o padrao de HTML da casa.
 - `tools/presentations/` concentra o gerador dos PPTX.
 - `tools/presentations/output/` deve ser tratado como cache temporario local.
-- A raiz do projeto mantem apenas os redirects canonicos dos tres materiais publicados.
+- A raiz do projeto mantem apenas os redirects canonicos dos materiais publicados ou em homologacao.
 
 ## Regras de manutencao
 

@@ -11,9 +11,10 @@ Repositorio dos materiais HTML estaticos da Alta Vista sobre investimentos inter
 - `assets/tributacao/`: assets especificos do material de tributacao.
 - `assets/diversificacao/`: assets especificos do material de diversificacao.
 - `docs/`: contexto operacional do projeto.
+- `docs/HTML_GUIDELINES.md`: padrao editorial, estrutural e visual para novos HTMLs.
 - `tools/presentations/`: fonte do gerador de PPTX.
 - `tools/presentations/output/`: artefatos temporarios de renderizacao, ignorados no Git.
-- raiz do projeto: apenas `index.html` e os redirects publicos canonicos para os tres HTMLs em `materials/`.
+- raiz do projeto: apenas `index.html` e os redirects publicos canonicos para os HTMLs em `materials/`.
 
 ## Publicacao
 
