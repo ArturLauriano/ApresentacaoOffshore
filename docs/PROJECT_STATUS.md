@@ -7,10 +7,9 @@
 
 ## Layout atual
 
-- `materials/` concentra os HTMLs finais.
-- `materials/presentations/` concentra os PPTX finais aprovados.
+- `materials/` concentra os HTMLs finais publicos.
+- `materials/presentations/` concentra os PPTX finais aprovados para a area publica.
 - `assets/logos/` concentra os SVGs de marca.
-- `assets/hub/` concentra os prints do guia operacional.
 - `assets/tributacao/` concentra os assets do material tributario.
 - `assets/diversificacao/` concentra os assets do material de diversificacao.
 - `tools/presentations/` concentra o gerador dos PPTX.
@@ -21,5 +20,6 @@
 
 - Nao criar redirects aliases duplicados na raiz; manter apenas os nomes canonicos publicados.
 - Nao mover ou remover redirects canonicos da raiz sem ajustar os links publicos.
+- Materiais internos devem viver em repositorio e deploy separados da vitrine publica.
 - Validar referencias de imagens e logos sempre que um HTML for movido.
 - Manter experimentos fora da `main` ate a aprovacao final.
