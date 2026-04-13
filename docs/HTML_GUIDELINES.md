@@ -192,5 +192,4 @@ Os exemplos mais uteis hoje para o padrao HTML da casa sao:
 
 - `materials/por-que-investir-exterior-cliente.html`
 - `materials/tributacao-investimentos-internacionais.html`
-- `materials/guia-hub-investimentos-internacionais.html`
 - `materials/outlook-mercados-marco-2026.html`
